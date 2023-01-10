@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/circle_new"
-    tools:context=".fragments.LearnFragment" >
+    tools:context=".fragments.LearnFragment"
+    >
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvNewWords"
@@ -15,7 +16,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSaveNewWord" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSaveNewWord"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_new_words"/>
 
     <TextView
         android:id="@+id/tvAlreadyLearnedWords"
@@ -23,7 +26,7 @@
         android:layout_height="wrap_content"
         android:gravity="center|end"
         android:paddingTop="4dp"
-        android:paddingEnd="8dp"
+        android:paddingEnd="16dp"
         android:text="Already learned words ->"
         android:textAllCaps="false"
         android:textColor="#666464"

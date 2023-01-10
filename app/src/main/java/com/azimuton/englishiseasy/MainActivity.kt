@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.Window
 import com.azimuton.englishiseasy.databinding.ActivityMainBinding
+import com.azimuton.englishiseasy.fragments.LearnFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var  binding : ActivityMainBinding
@@ -17,7 +18,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.ivCloseApplication.setOnClickListener { finishAffinity() }
         binding.tvCurrentTime.text = System.currentTimeMillis().toString()
+
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.flMain, LearnFragment())
+            .commit()
     }
     override fun onResume() {
         super.onResume()
