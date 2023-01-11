@@ -1,6 +1,7 @@
 package com.azimuton.englishiseasy.fragments
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,6 +15,8 @@ import com.azimuton.domain.models.Word
 import com.azimuton.domain.usecase.WordDeleteUseCase
 import com.azimuton.domain.usecase.WordGetAllUseCase
 import com.azimuton.domain.usecase.WordInsertUseCase
+import com.azimuton.englishiseasy.MainActivity
+import com.azimuton.englishiseasy.R
 import com.azimuton.englishiseasy.adapters.NewWordsAdapter
 import com.azimuton.englishiseasy.databinding.FragmentLearnBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -46,10 +49,11 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
         wordList = ArrayList<Word>()
         wordDatabase = AppRoomDatabase.getDatabase(requireActivity())
         getData()
-        adapter = NewWordsAdapter(requireActivity(), wordList,this)
+        adapter = NewWordsAdapter(requireActivity(), this)
         binding.rvNewWords.layoutManager = LinearLayoutManager(requireActivity())
         binding.rvNewWords.adapter = adapter
-        adapter.notifyDataSetChanged()
+        //adapter.notifyDataSetChanged()
+        adapter.submitList(wordList)
 
 
         binding.tvSaveNewWord.setOnClickListener {
@@ -60,6 +64,10 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
                 Toast.makeText(requireActivity(), "Поля заполнены!", Toast.LENGTH_SHORT).show()
                 insert.execute(word)
                 adapter.notifyDataSetChanged()
+                val intent = Intent(requireActivity(), MainActivity :: class.java)
+                startActivity(intent)
+                activity?.overridePendingTransition(0, R.anim.open_activity)
+                activity?.finish()
             } else {
                 Toast.makeText(
                     requireActivity(), "Заполните пустые поля!",
@@ -72,10 +80,6 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
         val wordFromDb: List<Word> = getAll.execute()
         wordList.clear()
         wordList.addAll(wordFromDb)
-    }
-
-    override fun showTranslate(index: Int) {
-
     }
 
     override fun copyWords(index: Int) {

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:paddingBottom="4dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -20,27 +21,26 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/circle_new">
+            android:background="@drawable/circle_new"
+            android:paddingBottom="4dp">
 
             <TextView
                 android:id="@+id/tvItemWord"
-                android:layout_width="0dp"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
                 android:textAllCaps="false"
                 android:textColor="@color/gray"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/ivItemEye"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/ivItemDelete"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -48,8 +48,8 @@
 
             <ImageView
                 android:id="@+id/ivItemCopyWordToLearned"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toStartOf="@+id/ivItemDelete"
@@ -57,11 +57,12 @@
                 app:srcCompat="@drawable/ic_baseline_copy_all_24" />
 
             <ImageView
-                android:id="@+id/ivItemEye"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:id="@+id/ivItemEyeClosed"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
+                android:visibility="gone"
                 app:layout_constraintEnd_toStartOf="@+id/ivItemCopyWordToLearned"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/eyeclose" />
@@ -76,9 +77,20 @@
                 android:textColor="#CC0E0E"
                 android:textSize="20sp"
                 android:textStyle="bold|italic"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvItemWord" />
+
+            <ImageView
+                android:id="@+id/ivItemEyeOpen"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/ivItemCopyWordToLearned"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/eyeopen" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
