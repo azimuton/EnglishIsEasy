@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.ListAdapter
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.azimuton.domain.models.Word
@@ -15,7 +16,7 @@ class NewWordsAdapter(
     private val contextA: Context,
     private val wordList: List<Word>,
     private val callback : LearnFragment)
-    : RecyclerView.Adapter<NewWordsAdapter.ViewHolder>() {
+    : RecyclerView.Adapter<NewWordsAdapter.ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(contextA).inflate(R.layout.item_new_words, parent, false), contextA)
     }
@@ -23,14 +24,19 @@ class NewWordsAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.englishWord.text = wordList[position].englishWord
         holder.translateWord.text = wordList[position].translateWord
-        holder.deleteWord.setOnClickListener {
+        holder.deleteWords.setOnClickListener {
             callback.deleteWords(position)
         }
         holder.copyWord.setOnClickListener {
             callback.copyWords(position)
         }
         holder.showTranslate.setOnClickListener {
-            callback.showTranslate(position)
+            val isOpen = true
+            if(isOpen) {
+                holder.translateWord.visibility = View.GONE
+            } else {
+                    holder.translateWord.visibility = View.VISIBLE
+            }
         }
     }
 
@@ -45,7 +51,7 @@ class NewWordsAdapter(
         val translateWord : TextView = itemView.findViewById(R.id.tvItemTranslate)
         val showTranslate : ImageView = itemView.findViewById(R.id.ivItemEye)
         val copyWord : ImageView = itemView.findViewById(R.id.ivItemCopyWordToLearned)
-        val deleteWord : ImageView = itemView.findViewById(R.id.ivItemDelete)
+        val deleteWords : ImageView = itemView.findViewById(R.id.ivItemDelete)
 
         interface ItemCallback{
             fun showTranslate(index : Int)

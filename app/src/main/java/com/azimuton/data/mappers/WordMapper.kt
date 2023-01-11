@@ -5,7 +5,7 @@ import com.azimuton.domain.models.Word
 
 class WordMapper : Mapper<WordEntity, Word> {
     override fun mapFromEntity(type: WordEntity): Word {
-        return Word( id = type.id,
+        return Word(id = type.id,
             englishWord = type.englishWord,
         translateWord = type.translateWord)
     }

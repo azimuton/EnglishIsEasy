@@ -10,8 +10,7 @@ class WordListMapper : Mapper<List<WordEntity>, List<Word>> {
 
         type.forEach { wordEntity ->
             listWord.add(
-                Word(
-                    id = wordEntity.id,
+                Word(id = wordEntity.id,
                     englishWord = wordEntity.englishWord,
                     translateWord = wordEntity.translateWord
                 )
@@ -25,8 +24,7 @@ class WordListMapper : Mapper<List<WordEntity>, List<Word>> {
 
         type.forEach { word ->
             listWord.add(
-                WordEntity(
-                    id = word.id,
+                WordEntity(id = word.id,
                     englishWord = word.englishWord,
                     translateWord = word.translateWord
                 )

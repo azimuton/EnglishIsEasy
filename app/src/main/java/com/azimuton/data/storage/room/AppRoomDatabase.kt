@@ -8,20 +8,20 @@ import com.azimuton.data.storage.models.WordEntity
 import com.azimuton.data.storage.room.dao.WordDao
 
 @Database(entities = [WordEntity::class], version = 1)
-abstract class RoomDatabase: RoomDatabase() {
+abstract class AppRoomDatabase: RoomDatabase() {
 
     abstract fun wordDao(): WordDao
 
     companion object {
         @Volatile
-        private var INSTANCE: RoomDatabase? = null
+        private var INSTANCE: AppRoomDatabase? = null
 
 
-        fun getDatabase(context: Context): RoomDatabase {
+        fun getDatabase(context: Context): AppRoomDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    RoomDatabase::class.java,
+                    AppRoomDatabase::class.java,
                     "recipe_database")
                     .allowMainThreadQueries()
                     .build()

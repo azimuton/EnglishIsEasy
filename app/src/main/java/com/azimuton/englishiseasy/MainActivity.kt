@@ -6,7 +6,9 @@ import android.view.View
 import android.view.Window
 import com.azimuton.englishiseasy.databinding.ActivityMainBinding
 import com.azimuton.englishiseasy.fragments.LearnFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var  binding : ActivityMainBinding
 
