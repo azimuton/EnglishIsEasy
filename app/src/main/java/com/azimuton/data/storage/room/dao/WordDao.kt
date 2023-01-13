@@ -1,5 +1,6 @@
 package com.azimuton.data.storage.room.dao
 
+
 import androidx.room.*
 import com.azimuton.data.storage.models.WordEntity
 
@@ -17,10 +18,10 @@ interface WordDao {
     fun deleteAll()
 
     @Insert
-    fun insertWord(wordEntity: WordEntity)
+    suspend fun insertWord(wordEntity: WordEntity)
 
     @Delete
-    fun deleteWord(wordEntity: WordEntity)
+    suspend fun deleteWord(wordEntity: WordEntity)
 
     @Update
     fun updateWord(wordEntity: WordEntity)

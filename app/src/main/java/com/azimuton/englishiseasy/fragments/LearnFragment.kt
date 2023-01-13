@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.azimuton.data.storage.room.AppRoomDatabase
 import com.azimuton.domain.models.Word
@@ -19,6 +20,7 @@ import com.azimuton.englishiseasy.MainActivity
 import com.azimuton.englishiseasy.R
 import com.azimuton.englishiseasy.adapters.NewWordsAdapter
 import com.azimuton.englishiseasy.databinding.FragmentLearnBinding
+import com.azimuton.englishiseasy.viewmodels.LearnViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -28,6 +30,7 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
     private lateinit var adapter: NewWordsAdapter
     lateinit var wordDatabase : AppRoomDatabase
     private lateinit var wordList: ArrayList<Word>
+    private val viewModel : LearnViewModel by activityViewModels()
     @Inject
     lateinit var insert : WordInsertUseCase
     @Inject
@@ -52,7 +55,6 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
         adapter = NewWordsAdapter(requireActivity(), this)
         binding.rvNewWords.layoutManager = LinearLayoutManager(requireActivity())
         binding.rvNewWords.adapter = adapter
-        //adapter.notifyDataSetChanged()
         adapter.submitList(wordList)
 
 
@@ -62,7 +64,8 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
                 val translateWord: String = binding.etTranslate.text.toString()
                 val word = Word(englishWord = englishWord, translateWord = translateWord, id = 0)
                 Toast.makeText(requireActivity(), "Поля заполнены!", Toast.LENGTH_SHORT).show()
-                insert.execute(word)
+                viewModel.insert(word)
+                //insert.execute(word)
                 adapter.notifyDataSetChanged()
                 val intent = Intent(requireActivity(), MainActivity :: class.java)
                 startActivity(intent)
@@ -93,7 +96,8 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
             .setMessage("Вы действительно хотите удалить запись?")
             .setPositiveButton("Ok") { dialog, _ ->
                 val words = wordList[index]
-                delete.execute(words)
+                viewModel.delete(words)
+                //delete.execute(words)
                 getData()
                 adapter.notifyDataSetChanged()
                 Toast.makeText(requireActivity(), "Запись удалена!", Toast.LENGTH_SHORT).show()

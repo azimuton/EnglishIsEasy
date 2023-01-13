@@ -10,9 +10,9 @@ interface WordStorage {
 
     fun deleteAll()
 
-    fun insertWord(wordEntity: WordEntity)
+    suspend fun insertWord(wordEntity: WordEntity)
 
-    fun deleteWord(wordEntity: WordEntity)
+    suspend fun deleteWord(wordEntity: WordEntity)
 
     fun updateWord(wordEntity: WordEntity)
 
