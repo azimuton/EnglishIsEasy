@@ -4,13 +4,16 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.azimuton.data.storage.models.LearnedWordEntity
 import com.azimuton.data.storage.models.WordEntity
+import com.azimuton.data.storage.room.dao.LearnedWordsDao
 import com.azimuton.data.storage.room.dao.WordDao
 
-@Database(entities = [WordEntity::class], version = 1)
+@Database(entities = [WordEntity::class, LearnedWordEntity::class], version = 1)
 abstract class AppRoomDatabase: RoomDatabase() {
 
     abstract fun wordDao(): WordDao
+    abstract fun learnedWordDao(): LearnedWordsDao
 
     companion object {
         @Volatile
@@ -22,7 +25,7 @@ abstract class AppRoomDatabase: RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     AppRoomDatabase::class.java,
-                    "recipe_database")
+                    "words_database")
                     .allowMainThreadQueries()
                     .build()
                 INSTANCE = instance

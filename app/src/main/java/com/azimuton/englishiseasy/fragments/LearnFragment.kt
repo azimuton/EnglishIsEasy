@@ -32,12 +32,7 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
     private lateinit var wordList: ArrayList<Word>
     private val viewModel : LearnViewModel by activityViewModels()
     @Inject
-    lateinit var insert : WordInsertUseCase
-    @Inject
     lateinit var getAll : WordGetAllUseCase
-    @Inject
-    lateinit var delete : WordDeleteUseCase
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -65,7 +60,6 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
                 val word = Word(englishWord = englishWord, translateWord = translateWord, id = 0)
                 Toast.makeText(requireActivity(), "Поля заполнены!", Toast.LENGTH_SHORT).show()
                 viewModel.insert(word)
-                //insert.execute(word)
                 adapter.notifyDataSetChanged()
                 val intent = Intent(requireActivity(), MainActivity :: class.java)
                 startActivity(intent)
@@ -97,7 +91,6 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
             .setPositiveButton("Ok") { dialog, _ ->
                 val words = wordList[index]
                 viewModel.delete(words)
-                //delete.execute(words)
                 getData()
                 adapter.notifyDataSetChanged()
                 Toast.makeText(requireActivity(), "Запись удалена!", Toast.LENGTH_SHORT).show()

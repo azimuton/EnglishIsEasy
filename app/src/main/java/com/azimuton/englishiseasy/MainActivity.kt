@@ -6,6 +6,7 @@ import android.view.View
 import android.view.Window
 import com.azimuton.englishiseasy.databinding.ActivityMainBinding
 import com.azimuton.englishiseasy.fragments.LearnFragment
+import com.azimuton.englishiseasy.fragments.LearnedFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -27,6 +28,20 @@ class MainActivity : AppCompatActivity() {
             .beginTransaction()
             .replace(R.id.flMain, LearnFragment())
             .commit()
+
+        binding.llLearn.setOnClickListener {
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.flMain, LearnFragment())
+                .commit()
+        }
+
+        binding.llLearned.setOnClickListener {
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.flMain, LearnedFragment())
+                .commit()
+        }
     }
     override fun onResume() {
         super.onResume()
