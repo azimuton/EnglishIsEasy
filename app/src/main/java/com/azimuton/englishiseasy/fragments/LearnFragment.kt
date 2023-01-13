@@ -13,9 +13,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.azimuton.data.storage.room.AppRoomDatabase
 import com.azimuton.domain.models.Word
-import com.azimuton.domain.usecase.WordDeleteUseCase
-import com.azimuton.domain.usecase.WordGetAllUseCase
-import com.azimuton.domain.usecase.WordInsertUseCase
+import com.azimuton.domain.usecase.*
 import com.azimuton.englishiseasy.MainActivity
 import com.azimuton.englishiseasy.R
 import com.azimuton.englishiseasy.adapters.NewWordsAdapter
@@ -30,9 +28,15 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
     private lateinit var adapter: NewWordsAdapter
     lateinit var wordDatabase : AppRoomDatabase
     private lateinit var wordList: ArrayList<Word>
+    @Inject
+    lateinit var copyUseCase: WordCopyUseCase
     private val viewModel : LearnViewModel by activityViewModels()
     @Inject
     lateinit var getAll : WordGetAllUseCase
+    @Inject
+    lateinit var deleteAll : WordDeleteAllUseCase
+    @Inject
+    lateinit var getWordById : WordGetWordByIdUseCase
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -51,6 +55,11 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
         binding.rvNewWords.layoutManager = LinearLayoutManager(requireActivity())
         binding.rvNewWords.adapter = adapter
         adapter.submitList(wordList)
+
+        binding.tvTransfer.setOnClickListener {
+            copyUseCase.execute()
+            deleteAll.execute()
+        }
 
 
         binding.tvSaveNewWord.setOnClickListener {
@@ -80,7 +89,9 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
     }
 
     override fun copyWords(index: Int) {
-        TODO("Not yet implemented")
+//        getWordById.execute(index)
+        //copyUseCase.execute()
+        //deleteAll.execute()
     }
 
     @SuppressLint("NotifyDataSetChanged")

@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.ivCloseApplication.setOnClickListener { finishAffinity() }
-        binding.tvCurrentTime.text = System.currentTimeMillis().toString()
+        binding.tvTimer.text = System.currentTimeMillis().toString()
 
         supportFragmentManager
             .beginTransaction()
@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
                 .beginTransaction()
                 .replace(R.id.flMain, LearnedFragment())
                 .commit()
+
         }
     }
     override fun onResume() {

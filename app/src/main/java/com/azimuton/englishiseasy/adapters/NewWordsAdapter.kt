@@ -25,9 +25,9 @@ class NewWordsAdapter(
         holder.deleteWords.setOnClickListener {
             callback.deleteWords(position)
         }
-        holder.copyWord.setOnClickListener {
-            callback.copyWords(position)
-        }
+//        holder.copyWord.setOnClickListener {
+//            callback.copyWords(position)
+//        }
         holder.showTranslateOpen.setOnClickListener {
             holder.translateWord.visibility = View.VISIBLE
             holder.showTranslateClosed.visibility = View.VISIBLE

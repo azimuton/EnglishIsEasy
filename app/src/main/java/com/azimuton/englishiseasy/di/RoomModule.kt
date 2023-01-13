@@ -2,6 +2,7 @@ package com.azimuton.englishiseasy.di
 
 import android.content.Context
 import com.azimuton.data.storage.room.AppRoomDatabase
+import com.azimuton.data.storage.room.dao.LearnedWordsDao
 import com.azimuton.data.storage.room.dao.WordDao
 import dagger.Module
 import dagger.Provides
@@ -26,5 +27,11 @@ class RoomModule {
     @Provides
     fun provideWordDao(appRoomDatabase : AppRoomDatabase): WordDao {
         return appRoomDatabase.wordDao()
+    }
+
+    @Singleton
+    @Provides
+    fun provideLearnedWordsDao(appRoomDatabase : AppRoomDatabase): LearnedWordsDao {
+        return appRoomDatabase.learnedWordDao()
     }
 }

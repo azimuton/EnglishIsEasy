@@ -1,9 +1,8 @@
 package com.azimuton.englishiseasy.di
 
+import com.azimuton.domain.repository.roomrepository.LearnedWordsRepository
 import com.azimuton.domain.repository.roomrepository.WordRepository
-import com.azimuton.domain.usecase.WordDeleteUseCase
-import com.azimuton.domain.usecase.WordGetAllUseCase
-import com.azimuton.domain.usecase.WordInsertUseCase
+import com.azimuton.domain.usecase.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,10 +16,14 @@ object DomainModule {
     fun provideWordDeleteUseCase(wordRepository: WordRepository): WordDeleteUseCase {
         return  WordDeleteUseCase(wordRepository = wordRepository)
     }
-//    @Provides
-//    fun provideNoteDelImageUseCase(noteRepository: SaveDataNoteRepository):NoteDelImageUseCase{
-//        return  NoteDelImageUseCase(saveDataNoteRepository = noteRepository)
-//    }
+    @Provides
+    fun provideWordCopyUseCase(wordRepository: WordRepository):WordCopyUseCase{
+        return  WordCopyUseCase(wordRepository = wordRepository)
+    }
+    @Provides
+    fun provideWordDeleteAllUseCase(wordRepository: WordRepository):WordDeleteAllUseCase{
+        return  WordDeleteAllUseCase(wordRepository = wordRepository)
+    }
     @Provides
     fun provideWordGetAllUseCase(wordRepository: WordRepository): WordGetAllUseCase {
         return WordGetAllUseCase(wordRepository = wordRepository)
@@ -33,8 +36,16 @@ object DomainModule {
 //    fun provideNoteUpdateUseCase(noteRepository: SaveDataNoteRepository):NoteUpdateUseCase{
 //        return  NoteUpdateUseCase(saveDataNoteRepository = noteRepository)
 //    }
-//    @Provides
-//    fun provideGetNoteByIdUseCase(noteRepository: SaveDataNoteRepository):NoteGetNoteByIdUseCase{
-//        return  NoteGetNoteByIdUseCase(saveDataNoteRepository = noteRepository)
-//    }
+    @Provides
+    fun provideGetWordByIdUseCase(wordRepository: WordRepository):WordGetWordByIdUseCase{
+        return  WordGetWordByIdUseCase(wordRepository = wordRepository)
+    }
+    @Provides
+    fun provideLearnedWordsGetAllUseCase(learnedWordsRepository: LearnedWordsRepository) : LearnedWordGetAllUseCase{
+        return LearnedWordGetAllUseCase(learnedWordsRepository = learnedWordsRepository)
+    }
+    @Provides
+    fun provideLearnedWordsDeleteUseCase(learnedWordsRepository: LearnedWordsRepository) : LearnedWordDeleteUseCase{
+        return LearnedWordDeleteUseCase(learnedWordsRepository = learnedWordsRepository)
+    }
 }

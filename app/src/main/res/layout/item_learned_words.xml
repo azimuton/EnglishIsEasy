@@ -20,7 +20,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/circle_new"
             android:paddingBottom="4dp">
 
@@ -35,7 +35,7 @@
                 app:srcCompat="@drawable/ur" />
 
             <ImageView
-                android:id="@+id/ivItemEyesLearned"
+                android:id="@+id/ivItemEyeLearnedOpen"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginTop="8dp"
@@ -46,15 +46,13 @@
 
             <TextView
                 android:id="@+id/tvItemLearnedWord"
-                android:layout_width="0dp"
+                android:layout_width="310dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
                 android:textColor="@color/gray"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/ivItemEyesLearned"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -70,8 +68,20 @@
                 android:textStyle="bold|italic"
                 android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ivItemEyesLearned" />
+                app:layout_constraintTop_toBottomOf="@+id/tvItemLearnedWord" />
+
+            <ImageView
+                android:id="@+id/ivItemEyeLearnedClose"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/ivItemDeleteLearnedWord"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/eyeclose" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

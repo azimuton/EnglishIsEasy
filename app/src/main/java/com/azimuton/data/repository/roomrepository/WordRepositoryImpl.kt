@@ -11,11 +11,11 @@ class WordRepositoryImpl(private val wordStorage: WordStorage) : WordRepository 
         return WordListMapper().mapFromEntity(wordStorage.getAll())
     }
 
-//    override fun copy(){
-//        wordStorage.copy()
-//    }
+    override fun copy(){
+        wordStorage.copy()
+    }
 
-    override suspend fun deleteAll() {
+    override fun deleteAll() {
         wordStorage.deleteAll()
     }
 
