@@ -19,11 +19,11 @@ class WordRepositoryImpl(private val wordStorage: WordStorage) : WordRepository 
         wordStorage.deleteAll()
     }
 
-    override suspend fun insertWord(word: Word) {
+    override fun insertWord(word: Word) {
        return wordStorage.insertWord(wordEntity = WordMapper().mapToEntity(word))
     }
 
-    override suspend fun deleteWord(word: Word) {
+    override fun deleteWord(word: Word) {
         return wordStorage.deleteWord(wordEntity = WordMapper().mapToEntity(word))
     }
 

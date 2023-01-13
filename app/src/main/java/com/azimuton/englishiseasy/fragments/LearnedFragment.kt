@@ -1,6 +1,7 @@
 package com.azimuton.englishiseasy.fragments
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.azimuton.data.storage.room.AppRoomDatabase
 import com.azimuton.domain.models.LearnedWord
 import com.azimuton.domain.usecase.LearnedWordGetAllUseCase
+import com.azimuton.englishiseasy.MainActivity
+import com.azimuton.englishiseasy.R
 import com.azimuton.englishiseasy.adapters.LearnedWordsAdapter
 import com.azimuton.englishiseasy.databinding.FragmentLearnedBinding
 import com.azimuton.englishiseasy.viewmodels.LearnedViewModel
@@ -23,7 +26,7 @@ import javax.inject.Inject
 class LearnedFragment : Fragment(), LearnedWordsAdapter.ViewHolder.ItemCallback {
     private lateinit var binding: FragmentLearnedBinding
     private lateinit var adapter: LearnedWordsAdapter
-    lateinit var wordDatabase : AppRoomDatabase
+    lateinit var learnedWordDatabase : AppRoomDatabase
     private lateinit var learnedWordsList: ArrayList<LearnedWord>
     @Inject
     lateinit var getAll : LearnedWordGetAllUseCase
@@ -40,12 +43,14 @@ class LearnedFragment : Fragment(), LearnedWordsAdapter.ViewHolder.ItemCallback 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         learnedWordsList = ArrayList<LearnedWord>()
-        wordDatabase = AppRoomDatabase.getDatabase(requireActivity())
+        learnedWordDatabase = AppRoomDatabase.getDatabase(requireActivity())
         getData()
         adapter = LearnedWordsAdapter(requireActivity(), this)
         binding.rvLearnedWords.layoutManager = LinearLayoutManager(requireActivity())
         binding.rvLearnedWords.adapter = adapter
         adapter.submitList(learnedWordsList)
+
+        binding.tvQuantityOfLearnedWords.text = learnedWordDatabase.learnedWordDao().count().toString()
     }
     private fun getData() {
         val wordFromDb: List<LearnedWord> = getAll.execute()
@@ -61,6 +66,7 @@ class LearnedFragment : Fragment(), LearnedWordsAdapter.ViewHolder.ItemCallback 
             .setPositiveButton("Ok") { dialog, _ ->
                 val learnedWords = learnedWordsList[index]
                 viewModel.delete(learnedWords)
+                binding.tvQuantityOfLearnedWords.text = learnedWordDatabase.learnedWordDao().count().toString()
                 getData()
                 adapter.notifyDataSetChanged()
                 Toast.makeText(requireActivity(), "Запись удалена!", Toast.LENGTH_SHORT).show()

@@ -8,6 +8,6 @@ interface LearnedWordsRepository {
 
     suspend fun insertLearnedWord(learnedWord : LearnedWord)
 
-    suspend fun deleteLearnedWord(learnedWord : LearnedWord)
+    fun deleteLearnedWord(learnedWord : LearnedWord)
 
 }

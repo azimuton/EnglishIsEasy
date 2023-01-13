@@ -17,7 +17,7 @@ class LearnedWordsRepositoryImpl(private val learnedWordsStorage: LearnedWordsSt
         LearnedWordMapper().mapToEntity(learnedWord))
     }
 
-    override suspend fun deleteLearnedWord(learnedWord: LearnedWord) {
+    override fun deleteLearnedWord(learnedWord: LearnedWord) {
         return learnedWordsStorage.deleteLearnedWord(learnedWordEntity =
         LearnedWordMapper().mapToEntity(learnedWord))
     }

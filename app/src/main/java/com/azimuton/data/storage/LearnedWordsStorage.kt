@@ -9,5 +9,5 @@ interface LearnedWordsStorage {
 
     suspend fun insertLearnedWord(learnedWordEntity: LearnedWordEntity)
 
-    suspend fun deleteLearnedWord(learnedWordEntity: LearnedWordEntity)
+    fun deleteLearnedWord(learnedWordEntity: LearnedWordEntity)
 }

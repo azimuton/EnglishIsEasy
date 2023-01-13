@@ -18,10 +18,10 @@ interface WordDao {
     fun deleteAll()
 
     @Insert
-    suspend fun insertWord(wordEntity: WordEntity)
+    fun insertWord(wordEntity: WordEntity)
 
     @Delete
-    suspend fun deleteWord(wordEntity: WordEntity)
+    fun deleteWord(wordEntity: WordEntity)
 
     @Update
     fun updateWord(wordEntity: WordEntity)

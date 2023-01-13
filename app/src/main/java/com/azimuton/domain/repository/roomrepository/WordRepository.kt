@@ -9,11 +9,11 @@ interface WordRepository {
 
     fun copy()
 
-     fun deleteAll()
+    fun deleteAll()
 
-    suspend fun insertWord(word: Word)
+    fun insertWord(word: Word)
 
-    suspend fun deleteWord(word: Word)
+    fun deleteWord(word: Word)
 
     fun updateWord(word: Word)
 

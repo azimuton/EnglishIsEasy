@@ -13,7 +13,7 @@ class LearnedWordStorageRoomImpl(private val learnedWordsDao: LearnedWordsDao) :
         learnedWordsDao.insertLearnedWord(learnedWordEntity = learnedWordEntity)
     }
 
-    override suspend fun deleteLearnedWord(learnedWordEntity: LearnedWordEntity) {
+    override fun deleteLearnedWord(learnedWordEntity: LearnedWordEntity) {
         learnedWordsDao.deleteLearnedWord(learnedWordEntity = learnedWordEntity)
     }
 }

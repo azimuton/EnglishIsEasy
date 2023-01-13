@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.viewModelScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.azimuton.data.storage.room.AppRoomDatabase
 import com.azimuton.domain.models.Word
@@ -31,6 +32,10 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
     @Inject
     lateinit var copyUseCase: WordCopyUseCase
     private val viewModel : LearnViewModel by activityViewModels()
+    @Inject
+    lateinit var insertInject : WordInsertUseCase
+    @Inject
+    lateinit var deleteInject : WordDeleteUseCase
     @Inject
     lateinit var getAll : WordGetAllUseCase
     @Inject
@@ -57,8 +62,27 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
         adapter.submitList(wordList)
 
         binding.tvTransfer.setOnClickListener {
-            copyUseCase.execute()
-            deleteAll.execute()
+            val addDialog = AlertDialog.Builder(requireActivity())
+            addDialog
+                .setMessage("Вы действительно хотите перенести записи?")
+                .setPositiveButton("Ok") { dialog, _ ->
+                    getData()
+                    viewModel.copy()
+                    deleteAll.execute()
+                    adapter.notifyDataSetChanged()
+                    activity?.overridePendingTransition(0, 0)
+                    val intent = Intent(requireActivity(), MainActivity :: class.java)
+                    startActivity(intent)
+                    activity?.overridePendingTransition(0, R.anim.open_activity)
+                    activity?.finish()
+                    Toast.makeText(requireActivity(), "Записи пересены!", Toast.LENGTH_SHORT).show()
+                    dialog.dismiss()
+                }
+                .setNegativeButton("Отмена") { dialog, _ ->
+                    dialog.dismiss()
+                }
+                .create()
+                .show()
         }
 
 
@@ -68,7 +92,8 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
                 val translateWord: String = binding.etTranslate.text.toString()
                 val word = Word(englishWord = englishWord, translateWord = translateWord, id = 0)
                 Toast.makeText(requireActivity(), "Поля заполнены!", Toast.LENGTH_SHORT).show()
-                viewModel.insert(word)
+                insertInject.execute(word)
+                //viewModel.insert(word)
                 adapter.notifyDataSetChanged()
                 val intent = Intent(requireActivity(), MainActivity :: class.java)
                 startActivity(intent)
@@ -88,12 +113,6 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
         wordList.addAll(wordFromDb)
     }
 
-    override fun copyWords(index: Int) {
-//        getWordById.execute(index)
-        //copyUseCase.execute()
-        //deleteAll.execute()
-    }
-
     @SuppressLint("NotifyDataSetChanged")
     override fun deleteWords(index: Int) {
         val addDialog = AlertDialog.Builder(requireActivity())
@@ -101,7 +120,8 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
             .setMessage("Вы действительно хотите удалить запись?")
             .setPositiveButton("Ok") { dialog, _ ->
                 val words = wordList[index]
-                viewModel.delete(words)
+                deleteInject.execute(words)
+                //viewModel.delete(words)
                 getData()
                 adapter.notifyDataSetChanged()
                 Toast.makeText(requireActivity(), "Запись удалена!", Toast.LENGTH_SHORT).show()

@@ -17,11 +17,11 @@ class WordStorageRoomImpl(private  val wordDao : WordDao) : WordStorage {
         wordDao.deleteAll()
     }
 
-    override suspend fun insertWord(wordEntity: WordEntity) {
+    override fun insertWord(wordEntity: WordEntity) {
         return wordDao.insertWord(wordEntity = wordEntity)
     }
 
-    override suspend fun deleteWord(wordEntity: WordEntity) {
+    override fun deleteWord(wordEntity: WordEntity) {
         return wordDao.deleteWord(wordEntity = wordEntity)
     }
 

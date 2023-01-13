@@ -25,9 +25,6 @@ class NewWordsAdapter(
         holder.deleteWords.setOnClickListener {
             callback.deleteWords(position)
         }
-//        holder.copyWord.setOnClickListener {
-//            callback.copyWords(position)
-//        }
         holder.showTranslateOpen.setOnClickListener {
             holder.translateWord.visibility = View.VISIBLE
             holder.showTranslateClosed.visibility = View.VISIBLE
@@ -51,7 +48,6 @@ class NewWordsAdapter(
         val deleteWords : ImageView = itemView.findViewById(R.id.ivItemDelete)
 
         interface ItemCallback{
-            fun copyWords(index : Int)
             fun deleteWords(index : Int)
         }
     }
