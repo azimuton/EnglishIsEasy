@@ -3,6 +3,7 @@ package com.azimuton.data.repository.roomrepository
 import com.azimuton.data.mappers.LearnedWordListMapper
 import com.azimuton.data.mappers.LearnedWordMapper
 import com.azimuton.data.storage.LearnedWordsStorage
+import com.azimuton.data.storage.models.LearnedWordEntity
 import com.azimuton.domain.models.LearnedWord
 import com.azimuton.domain.repository.roomrepository.LearnedWordsRepository
 
@@ -12,7 +13,11 @@ class LearnedWordsRepositoryImpl(private val learnedWordsStorage: LearnedWordsSt
         return  LearnedWordListMapper().mapFromEntity(learnedWordsStorage.getAll())
     }
 
-    override suspend fun insertLearnedWord(learnedWord: LearnedWord) {
+    override fun randoms() : LearnedWordEntity {
+       return learnedWordsStorage.randoms()
+    }
+
+    override fun insertLearnedWord(learnedWord: LearnedWord) {
         return learnedWordsStorage.insertLearnedWord(learnedWordEntity =
         LearnedWordMapper().mapToEntity(learnedWord))
     }

@@ -9,7 +9,11 @@ class LearnedWordStorageRoomImpl(private val learnedWordsDao: LearnedWordsDao) :
        return learnedWordsDao.getAll()
     }
 
-    override suspend fun insertLearnedWord(learnedWordEntity: LearnedWordEntity) {
+    override fun randoms() : LearnedWordEntity {
+        return learnedWordsDao.randoms()
+    }
+
+    override fun insertLearnedWord(learnedWordEntity: LearnedWordEntity) {
         learnedWordsDao.insertLearnedWord(learnedWordEntity = learnedWordEntity)
     }
 

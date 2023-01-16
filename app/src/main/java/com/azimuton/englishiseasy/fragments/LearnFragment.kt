@@ -85,7 +85,6 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
                 .show()
         }
 
-
         binding.tvSaveNewWord.setOnClickListener {
             if (binding.etNewWord.text.isNotEmpty() && binding.etTranslate.text.isNotEmpty()) {
                 val englishWord: String = binding.etNewWord.text.toString()

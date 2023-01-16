@@ -51,6 +51,26 @@ class LearnedFragment : Fragment(), LearnedWordsAdapter.ViewHolder.ItemCallback 
         adapter.submitList(learnedWordsList)
 
         binding.tvQuantityOfLearnedWords.text = learnedWordDatabase.learnedWordDao().count().toString()
+
+        binding.tvChooseWord.setOnClickListener {randomLearned()}
+        binding.ivChangeWords.setOnClickListener { changeLanguage() }
+
+        binding.ivCloseCheckingWord.setOnClickListener {
+            binding.tvCheckingWord.text = ""
+            binding.tvCheckingTranslate.text = ""
+            binding.tvCheckingTranslate.visibility = View.GONE
+        }
+
+        binding.ivEyeOpen.setOnClickListener {
+                binding.tvCheckingTranslate.visibility = View.VISIBLE
+            binding.ivEyeOpen.visibility = View.GONE
+            binding.ivEyeClosed.visibility = View.VISIBLE
+        }
+        binding.ivEyeClosed.setOnClickListener {
+                binding.tvCheckingTranslate.visibility = View.GONE
+            binding.ivEyeClosed.visibility = View.GONE
+            binding.ivEyeOpen.visibility = View.VISIBLE
+        }
     }
     private fun getData() {
         val wordFromDb: List<LearnedWord> = getAll.execute()
@@ -77,5 +97,24 @@ class LearnedFragment : Fragment(), LearnedWordsAdapter.ViewHolder.ItemCallback 
             }
             .create()
             .show()
+    }
+    private fun randomLearned(){
+        val resultRandom = learnedWordDatabase.learnedWordDao().randoms()
+        if(learnedWordDatabase.learnedWordDao().count() != 0){
+            binding.tvCheckingWord.text = resultRandom.learnedEnglishWord
+            binding.tvCheckingTranslate.text = resultRandom.learnedTranslateWord
+        } else{
+            Toast.makeText(requireActivity(), "Нет слов для отображения!", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun changeLanguage() {
+        val resultRandom = learnedWordDatabase.learnedWordDao().randoms()
+        if(learnedWordDatabase.learnedWordDao().count() != 0){
+            binding.tvCheckingWord.text = resultRandom.learnedTranslateWord
+            binding.tvCheckingTranslate.text = resultRandom.learnedEnglishWord
+        } else{
+            Toast.makeText(requireActivity(), "Нет слов для отображения!", Toast.LENGTH_SHORT).show()
+        }
     }
 }

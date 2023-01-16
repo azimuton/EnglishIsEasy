@@ -7,7 +7,9 @@ interface LearnedWordsStorage {
 
     fun getAll(): List<LearnedWordEntity>
 
-    suspend fun insertLearnedWord(learnedWordEntity: LearnedWordEntity)
+    fun randoms() : LearnedWordEntity
+
+    fun insertLearnedWord(learnedWordEntity: LearnedWordEntity)
 
     fun deleteLearnedWord(learnedWordEntity: LearnedWordEntity)
 }

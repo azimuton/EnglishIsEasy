@@ -48,4 +48,8 @@ object DomainModule {
     fun provideLearnedWordsDeleteUseCase(learnedWordsRepository: LearnedWordsRepository) : LearnedWordDeleteUseCase{
         return LearnedWordDeleteUseCase(learnedWordsRepository = learnedWordsRepository)
     }
+    @Provides
+    fun provideLearnedWordsRandomUseCase(learnedWordsRepository : LearnedWordsRepository) : LearnedWordRandomUseCase{
+        return LearnedWordRandomUseCase(learnedWordsRepository = learnedWordsRepository)
+    }
 }

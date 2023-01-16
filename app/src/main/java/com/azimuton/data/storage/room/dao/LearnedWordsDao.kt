@@ -20,7 +20,7 @@ interface LearnedWordsDao {
     fun randoms() : LearnedWordEntity
 
     @Insert
-    suspend fun insertLearnedWord(learnedWordEntity: LearnedWordEntity)
+    fun insertLearnedWord(learnedWordEntity: LearnedWordEntity)
 
     @Delete
     fun deleteLearnedWord(learnedWordEntity: LearnedWordEntity)
