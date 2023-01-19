@@ -112,6 +112,10 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
         wordList.addAll(wordFromDb)
     }
 
+//    override fun copyId(index: Int) {
+//        wordDatabase.wordDao().copyId(index)
+//    }
+
     @SuppressLint("NotifyDataSetChanged")
     override fun deleteWords(index: Int) {
         val addDialog = AlertDialog.Builder(requireActivity())

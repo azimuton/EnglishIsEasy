@@ -22,22 +22,22 @@ class LearnViewModel @Inject constructor(
 ) : ViewModel() {
 
     fun getAll(){
-        viewModelScope.launch(Dispatchers.Main){
+        viewModelScope.launch{
             wordGetAllUseCase.execute()
         }
     }
     fun delete(word : Word){
-        viewModelScope.async(){
+        viewModelScope.launch(){
             wordDeleteUseCase.execute(word)
         }
     }
     fun insert(word: Word){
-        viewModelScope.async(){
+        viewModelScope.launch(){
             wordInsertUseCase.execute(word)
         }
     }
     fun copy(){
-        viewModelScope.async(){
+        viewModelScope.launch(){
             wordCopyUseCase.execute()
         }
     }

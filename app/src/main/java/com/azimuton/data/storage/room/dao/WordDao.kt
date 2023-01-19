@@ -10,6 +10,10 @@ interface WordDao {
     @Query("SELECT * FROM word")
     fun getAll(): List<WordEntity>
 
+//    @Transaction
+//    @Query("INSERT INTO learnedwords SELECT * FROM word WHERE id = :id LIMIT 1")
+//    fun copyId(id : Int)
+
     @Transaction
     @Query("INSERT INTO learnedwords SELECT * FROM word")
     fun copy()

@@ -13,6 +13,9 @@ interface LearnedWordsDao {
     @Query("SELECT * FROM learnedwords")
     fun getAll(): List<LearnedWordEntity>
 
+//    @Query("SELECT * FROM notes_table WHERE title LIKE '%' || :title || '%'")
+//    fun searchByTitle(title: String): Flow<List<NoteEntity>>
+
     @Query("SELECT  COUNT(DISTINCT id) as count FROM learnedwords")
     fun count(): Int
 

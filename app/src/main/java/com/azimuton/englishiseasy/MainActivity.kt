@@ -7,6 +7,7 @@ import android.view.Window
 import com.azimuton.englishiseasy.databinding.ActivityMainBinding
 import com.azimuton.englishiseasy.fragments.LearnFragment
 import com.azimuton.englishiseasy.fragments.LearnedFragment
+import com.azimuton.englishiseasy.fragments.WriteFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -42,6 +43,12 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.flMain, LearnedFragment())
                 .commit()
 
+        }
+        binding.llWrite.setOnClickListener{
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.flMain, WriteFragment())
+                .commit()
         }
     }
     override fun onResume() {
