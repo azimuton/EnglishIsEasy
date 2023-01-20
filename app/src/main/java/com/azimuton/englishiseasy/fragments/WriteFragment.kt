@@ -86,7 +86,12 @@ class WriteFragment : Fragment() {
             binding.etWriteWordForChecking.text.clear()
         }
         binding.tvWriteHintTap.setOnClickListener {
-            binding.tvWriteHintWord.text = randomWord.learnedEnglishWord
+            if(binding.tvWriteWord.text.isNotEmpty()){
+                binding.tvWriteHintWord.text = randomWord.learnedEnglishWord
+            } else{
+                Toast.makeText(requireActivity(), "Нет слов для подсказки !", Toast.LENGTH_SHORT).show()
+            }
+
         }
     }
 }
