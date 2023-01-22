@@ -5,10 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.Window
 import com.azimuton.englishiseasy.databinding.ActivityMainBinding
-import com.azimuton.englishiseasy.fragments.LearnFragment
-import com.azimuton.englishiseasy.fragments.LearnedFragment
-import com.azimuton.englishiseasy.fragments.TranslaterFragment
-import com.azimuton.englishiseasy.fragments.WriteFragment
+import com.azimuton.englishiseasy.fragments.*
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -55,6 +52,12 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.flMain, TranslaterFragment())
+                .commit()
+        }
+        binding.llFrasals.setOnClickListener {
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.flMain, FrasalsFragment())
                 .commit()
         }
     }

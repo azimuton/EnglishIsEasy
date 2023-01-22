@@ -1,12 +1,15 @@
 package com.azimuton.englishiseasy.fragments
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.activityViewModels
@@ -61,6 +64,9 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
         binding.rvNewWords.adapter = adapter
         adapter.submitList(wordList)
 
+        binding.ivClearNewWord.setOnClickListener { binding.etNewWord.text.clear() }
+        binding.ivClearTranslate.setOnClickListener { binding.etTranslate.text.clear() }
+
         binding.tvTransfer.setOnClickListener {
             val addDialog = AlertDialog.Builder(requireActivity())
             addDialog
@@ -94,6 +100,9 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
                 insertInject.execute(word)
                 //viewModel.insert(word)
                 adapter.notifyDataSetChanged()
+                val ims = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                ims.hideSoftInputFromWindow(binding.etNewWord.windowToken, 0)
+                ims.hideSoftInputFromWindow(binding.etTranslate.windowToken, 0)
                 val intent = Intent(requireActivity(), MainActivity :: class.java)
                 startActivity(intent)
                 activity?.overridePendingTransition(0, R.anim.open_activity)
@@ -127,6 +136,9 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
                 //viewModel.delete(words)
                 getData()
                 adapter.notifyDataSetChanged()
+                val  w : Window? = activity?.window
+                w?.decorView?.systemUiVisibility = (View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // скрываем нижнюю панель навигации
+                        or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY) //появляется поверх активити и исчезает
                 Toast.makeText(requireActivity(), "Запись удалена!", Toast.LENGTH_SHORT).show()
                 dialog.dismiss()
             }
@@ -135,6 +147,12 @@ class LearnFragment : Fragment(), NewWordsAdapter.ViewHolder.ItemCallback {
             }
             .create()
             .show()
+    }
+    override fun onResume() {
+        super.onResume()
+        val w: Window? = activity?.window
+        w?.decorView?.systemUiVisibility = (View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // скрываем нижнюю панель навигации
+                or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY) //появляется поверх активити и исчезает
     }
 
 }
