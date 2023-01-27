@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/circle_new"
+    tools:context=".fragments.newwords.WashRoomFragment">
+
+    <ImageView
+        android:id="@+id/ivBackToNewWordsList"
+        android:layout_width="78dp"
+        android:layout_height="42dp"
+        android:src="@drawable/backnote"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBackToNewWordsList"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tomato"
+                    style="@style/english"
+                    android:text="Tomato" />
+
+                <TextView
+                    android:id="@+id/tvTomato"
+                    style="@style/translate"
+                    android:text="Помидор" />
+
+                <ImageView
+                    android:id="@+id/ivTomato"
+                    style="@style/image_to_main"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/cucumber"
+                    style="@style/english"
+                    android:text="Cucumber" />
+
+                <TextView
+                    android:id="@+id/tvCucumber"
+                    style="@style/translate"
+                    android:text="Огурец" />
+
+                <ImageView
+                    android:id="@+id/ivCucumber"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/cabbage"
+                    style="@style/english"
+                    android:text="Cabbage" />
+
+                <TextView
+                    android:id="@+id/tvCabbage"
+                    style="@style/translate"
+                    android:text="Капуста" />
+
+                <ImageView
+                    android:id="@+id/ivCabbage"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/vegetablemarrow"
+                    style="@style/english"
+                    android:text="Vegetable marrow" />
+
+                <TextView
+                    android:id="@+id/tvVegetablemarrow"
+                    style="@style/translate"
+                    android:text="Кабачок" />
+
+                <ImageView
+                    android:id="@+id/ivVegetablemarrow"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/eggplant"
+                    style="@style/english"
+                    android:text="Eggplant" />
+
+                <TextView
+                    android:id="@+id/tvEggplant"
+                    style="@style/translate"
+                    android:text="Баклажан" />
+
+                <ImageView
+                    android:id="@+id/ivEggplant"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/carrot"
+                    style="@style/english"
+                    android:text="Carrot" />
+
+                <TextView
+                    android:id="@+id/tvCarrot"
+                    style="@style/translate"
+                    android:text="Морковь" />
+
+                <ImageView
+                    android:id="@+id/ivCarrot"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/beet"
+                    style="@style/english"
+                    android:text="Beet" />
+
+                <TextView
+                    android:id="@+id/tvBeet"
+                    style="@style/translate"
+                    android:text="Свекла" />
+
+                <ImageView
+                    android:id="@+id/ivBeet"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/potato"
+                    style="@style/english"
+                    android:text="Potato" />
+
+                <TextView
+                    android:id="@+id/tvPotato"
+                    style="@style/translate"
+                    android:text="Картофель" />
+
+                <ImageView
+                    android:id="@+id/ivPotato"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/radish"
+                    style="@style/english"
+                    android:text="Radish" />
+
+                <TextView
+                    android:id="@+id/tvRadish"
+                    style="@style/translate"
+                    android:text="Редис" />
+
+                <ImageView
+                    android:id="@+id/ivRadish"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pepper"
+                    style="@style/english"
+                    android:text="Pepper" />
+
+                <TextView
+                    android:id="@+id/tvPepper"
+                    style="@style/translate"
+                    android:text="Перец" />
+
+                <ImageView
+                    android:id="@+id/ivPepper"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/onion"
+                    style="@style/english"
+                    android:text="Onion" />
+
+                <TextView
+                    android:id="@+id/tvOnion"
+                    style="@style/translate"
+                    android:text="Лук" />
+
+                <ImageView
+                    android:id="@+id/ivOnion"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/garlic"
+                    style="@style/english"
+                    android:text="Garlic" />
+
+                <TextView
+                    android:id="@+id/tvGarlic"
+                    style="@style/translate"
+                    android:text="Чеснок" />
+
+                <ImageView
+                    android:id="@+id/ivGarlic"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/peas"
+                    style="@style/english"
+                    android:text="Peas" />
+
+                <TextView
+                    android:id="@+id/tvPeas"
+                    style="@style/translate"
+                    android:text="Горох" />
+
+                <ImageView
+                    android:id="@+id/ivPeas"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/turnip"
+                    style="@style/english"
+                    android:text="Turnip" />
+
+                <TextView
+                    android:id="@+id/tvTurnip"
+                    style="@style/translate"
+                    android:text="Репа" />
+
+                <ImageView
+                    android:id="@+id/ivTurnip"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ginger"
+                    style="@style/english"
+                    android:text="Ginger" />
+
+                <TextView
+                    android:id="@+id/tvGinger"
+                    style="@style/translate"
+                    android:text="Имбирь" />
+
+                <ImageView
+                    android:id="@+id/ivGinger"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/jerusalemartichoke"
+                    style="@style/english"
+                    android:text="Jerusalem artichoke" />
+
+                <TextView
+                    android:id="@+id/tvJerusalemartichok"
+                    style="@style/translate"
+                    android:text="Топинамбур" />
+
+                <ImageView
+                    android:id="@+id/ivJerusalemartichok"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/beans"
+                    style="@style/english"
+                    android:text="Beans" />
+
+                <TextView
+                    android:id="@+id/tvBeans"
+                    style="@style/translate"
+                    android:text="Фасоль" />
+
+                <ImageView
+                    android:id="@+id/ivBeans"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/asparagus"
+                    style="@style/english"
+                    android:text="Asparagus" />
+
+                <TextView
+                    android:id="@+id/tvAsparagus"
+                    style="@style/translate"
+                    android:text="Спаржа" />
+
+                <ImageView
+                    android:id="@+id/ivAsparagus"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/horseradish"
+                    style="@style/english"
+                    android:text="Horseradish" />
+
+                <TextView
+                    android:id="@+id/tvHorseradish"
+                    style="@style/translate"
+                    android:text="Хрен" />
+
+                <ImageView
+                    android:id="@+id/ivHorseradish"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/parsnip"
+                    style="@style/english"
+                    android:text="Parsnip" />
+
+                <TextView
+                    android:id="@+id/tvParsnip"
+                    style="@style/translate"
+                    android:text="Пастернак" />
+
+                <ImageView
+                    android:id="@+id/ivParsnip"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/squash"
+                    style="@style/english"
+                    android:text="Squash" />
+
+                <TextView
+                    android:id="@+id/tvSquash"
+                    style="@style/translate"
+                    android:text="Патиссон" />
+
+                <ImageView
+                    android:id="@+id/ivSquash"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

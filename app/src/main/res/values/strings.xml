@@ -2,4 +2,25 @@
     <string name="app_name">EnglishIsEasy</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="names">
+        <item>Ванная комната</item>
+        <item>Водоемы</item>
+        <item>Глаголы</item>
+        <item>Глаголы (продолжение)</item>
+        <item>Город</item>
+        <item>Дикие животные</item>
+        <item>Домашние животные</item>
+        <item>Здание</item>
+        <item>Инструменты</item>
+        <item>Кухня</item>
+        <item>Овощи</item>
+        <item>Погода</item>
+        <item>Природа</item>
+        <item>Семья</item>
+        <item>Спальня</item>
+        <item>Транспорт</item>
+        <item>Фрукты</item>
+        <item>Части тела</item>
+        <item> Ягоды</item>
+    </string-array>
 </resources>

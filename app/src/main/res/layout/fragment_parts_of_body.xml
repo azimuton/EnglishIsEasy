@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/circle_new"
+    tools:context=".fragments.newwords.WashRoomFragment">
+
+    <ImageView
+        android:id="@+id/ivBackToNewWordsList"
+        android:layout_width="78dp"
+        android:layout_height="42dp"
+        android:src="@drawable/backnote"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBackToNewWordsList"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/hand"
+                    style="@style/english"
+                    android:text="Hand" />
+
+                <TextView
+                    android:id="@+id/tvHand"
+                    style="@style/translate"
+                    android:text="Ладонь" />
+
+                <ImageView
+                    android:id="@+id/ivHand"
+                    style="@style/image_to_main"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/head"
+                    style="@style/english"
+                    android:text="Head" />
+
+                <TextView
+                    android:id="@+id/tvHead"
+                    style="@style/translate"
+                    android:text="Голова" />
+
+                <ImageView
+                    android:id="@+id/ivHead"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/face"
+                    style="@style/english"
+                    android:text="Face" />
+
+                <TextView
+                    android:id="@+id/tvFace"
+                    style="@style/translate"
+                    android:text="Лицо" />
+
+                <ImageView
+                    android:id="@+id/ivFace"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/eye"
+                    style="@style/english"
+                    android:text="Eye" />
+
+                <TextView
+                    android:id="@+id/tvEye"
+                    style="@style/translate"
+                    android:text="Глаз" />
+
+                <ImageView
+                    android:id="@+id/ivEye"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nose"
+                    style="@style/english"
+                    android:text="Nose" />
+
+                <TextView
+                    android:id="@+id/tvNose"
+                    style="@style/translate"
+                    android:text="Нос" />
+
+                <ImageView
+                    android:id="@+id/ivNose"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tooth"
+                    style="@style/english"
+                    android:text="Tooth" />
+
+                <TextView
+                    android:id="@+id/tvTooth"
+                    style="@style/translate"
+                    android:text="Зуб" />
+
+                <ImageView
+                    android:id="@+id/ivTooth"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/hair"
+                    style="@style/english"
+                    android:text="Hair" />
+
+                <TextView
+                    android:id="@+id/tvHair"
+                    style="@style/translate"
+                    android:text="Волосы" />
+
+                <ImageView
+                    android:id="@+id/ivHair"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lip"
+                    style="@style/english"
+                    android:text="Lip" />
+
+                <TextView
+                    android:id="@+id/tvLip"
+                    style="@style/translate"
+                    android:text="Губа" />
+
+                <ImageView
+                    android:id="@+id/ivLip"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/neck"
+                    style="@style/english"
+                    android:text="Neck" />
+
+                <TextView
+                    android:id="@+id/tvNeck"
+                    style="@style/translate"
+                    android:text="Шея" />
+
+                <ImageView
+                    android:id="@+id/ivNeck"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mouth"
+                    style="@style/english"
+                    android:text="Mouth" />
+
+                <TextView
+                    android:id="@+id/tvMouth"
+                    style="@style/translate"
+                    android:text="Рот" />
+
+                <ImageView
+                    android:id="@+id/ivMouth"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ear"
+                    style="@style/english"
+                    android:text="Ear" />
+
+                <TextView
+                    android:id="@+id/tvEar"
+                    style="@style/translate"
+                    android:text="Ухо" />
+
+                <ImageView
+                    android:id="@+id/ivEar"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/shoulder"
+                    style="@style/english"
+                    android:text="Shoulder" />
+
+                <TextView
+                    android:id="@+id/tvShoulder"
+                    style="@style/translate"
+                    android:text="Плечо" />
+
+                <ImageView
+                    android:id="@+id/ivShoulder"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nail"
+                    style="@style/english"
+                    android:text="Nail" />
+
+                <TextView
+                    android:id="@+id/tvNail"
+                    style="@style/translate"
+                    android:text="Ноготь" />
+
+                <ImageView
+                    android:id="@+id/ivNail"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/arm"
+                    style="@style/english"
+                    android:text="Arm" />
+
+                <TextView
+                    android:id="@+id/tvArm"
+                    style="@style/translate"
+                    android:text="Предплечье" />
+
+                <ImageView
+                    android:id="@+id/ivArm"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/finger"
+                    style="@style/english"
+                    android:text="Finger" />
+
+                <TextView
+                    android:id="@+id/tvFinger"
+                    style="@style/translate"
+                    android:text="Палец" />
+
+                <ImageView
+                    android:id="@+id/ivFinger"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/thumb"
+                    style="@style/english"
+                    android:text="Thumb" />
+
+                <TextView
+                    android:id="@+id/tvThumb"
+                    style="@style/translate"
+                    android:text="Большой палец" />
+
+                <ImageView
+                    android:id="@+id/ivThumb"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/knee"
+                    style="@style/english"
+                    android:text="Knee" />
+
+                <TextView
+                    android:id="@+id/tvKnee"
+                    style="@style/translate"
+                    android:text="Колено" />
+
+                <ImageView
+                    android:id="@+id/ivKnee"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/foot"
+                    style="@style/english"
+                    android:text="Foot" />
+
+                <TextView
+                    android:id="@+id/tvFoot"
+                    style="@style/translate"
+                    android:text="Стопа" />
+
+                <ImageView
+                    android:id="@+id/ivFoot"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/toe"
+                    style="@style/english"
+                    android:text="Toe" />
+
+                <TextView
+                    android:id="@+id/tvToe"
+                    style="@style/translate"
+                    android:text="Палец ноги" />
+
+                <ImageView
+                    android:id="@+id/ivToe"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/leg"
+                    style="@style/english"
+                    android:text="Leg" />
+
+                <TextView
+                    android:id="@+id/tvLeg"
+                    style="@style/translate"
+                    android:text="Нога" />
+
+                <ImageView
+                    android:id="@+id/ivLeg"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/back"
+                    style="@style/english"
+                    android:text="Back" />
+
+                <TextView
+                    android:id="@+id/tvBack"
+                    style="@style/translate"
+                    android:text="Спина" />
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/waist"
+                    style="@style/english"
+                    android:text="Waist" />
+
+                <TextView
+                    android:id="@+id/tvWaist"
+                    style="@style/translate"
+                    android:text="Талия, Поясница" />
+
+                <ImageView
+                    android:id="@+id/ivWaist"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/hip"
+                    style="@style/english"
+                    android:text="Hip" />
+
+                <TextView
+                    android:id="@+id/tvHip"
+                    style="@style/translate"
+                    android:text="Бедро" />
+
+                <ImageView
+                    android:id="@+id/ivHip"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/chest"
+                    style="@style/english"
+                    android:text="Chest" />
+
+                <TextView
+                    android:id="@+id/tvChest"
+                    style="@style/translate"
+                    android:text="Грудная клетка" />
+
+                <ImageView
+                    android:id="@+id/ivChest"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/stomach"
+                    style="@style/english"
+                    android:text="Stomach" />
+
+                <TextView
+                    android:id="@+id/tvStomach"
+                    style="@style/translate"
+                    android:text="Живот, Брюхо" />
+
+                <ImageView
+                    android:id="@+id/ivStomack"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/side"
+                    style="@style/english"
+                    android:text="Side" />
+
+                <TextView
+                    android:id="@+id/tvSide"
+                    style="@style/translate"
+                    android:text="Бок" />
+
+                <ImageView
+                    android:id="@+id/ivSide"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/brain"
+                    style="@style/english"
+                    android:text="Brain" />
+
+                <TextView
+                    android:id="@+id/tvBrain"
+                    style="@style/translate"
+                    android:text="Мозг" />
+
+                <ImageView
+                    android:id="@+id/ivBrain"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/heart"
+                    style="@style/english"
+                    android:text="Heart" />
+
+                <TextView
+                    android:id="@+id/tvHeart"
+                    style="@style/translate"
+                    android:text="Сердце" />
+
+                <ImageView
+                    android:id="@+id/ivHeart"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/skin"
+                    style="@style/english"
+                    android:text="Skin" />
+
+                <TextView
+                    android:id="@+id/tvSkin"
+                    style="@style/translate"
+                    android:text="Кожа" />
+
+                <ImageView
+                    android:id="@+id/ivSkin"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/blood"
+                    style="@style/english"
+                    android:text="Blood" />
+
+                <TextView
+                    android:id="@+id/tvBlood"
+                    style="@style/translate"
+                    android:text="Кровь" />
+
+                <ImageView
+                    android:id="@+id/ivBlood"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/circle_new"
+    tools:context=".fragments.newwords.WashRoomFragment">
+
+    <ImageView
+        android:id="@+id/ivBackToNewWordsList"
+        android:layout_width="78dp"
+        android:layout_height="42dp"
+        android:src="@drawable/backnote"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBackToNewWordsList"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/bus"
+                    style="@style/english"
+                    android:text="Bus" />
+
+                <TextView
+                    android:id="@+id/tvBus"
+                    style="@style/translate"
+                    android:text="Автобус" />
+
+                <ImageView
+                    android:id="@+id/ivBus"
+                    style="@style/image_to_main"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/automobile"
+                    style="@style/english"
+                    android:text="Automobile" />
+
+                <TextView
+                    android:id="@+id/tvAutomobile"
+                    style="@style/translate"
+                    android:text="Автомобиль" />
+
+                <ImageView
+                    android:id="@+id/ivAutomobile"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/trolleybus"
+                    style="@style/english"
+                    android:text="Trolleybus" />
+
+                <TextView
+                    android:id="@+id/tvTrolleybus"
+                    style="@style/translate"
+                    android:text="Троллейбус" />
+
+                <ImageView
+                    android:id="@+id/ivTrolleybus"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tram"
+                    style="@style/english"
+                    android:text="Tram" />
+
+                <TextView
+                    android:id="@+id/tvTram"
+                    style="@style/translate"
+                    android:text="Трамвай" />
+
+                <ImageView
+                    android:id="@+id/ivTram"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/truck"
+                    style="@style/english"
+                    android:text="Truck" />
+
+                <TextView
+                    android:id="@+id/tvTruck"
+                    style="@style/translate"
+                    android:text="Грузовик" />
+
+                <ImageView
+                    android:id="@+id/ivTruck"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/dumptruck"
+                    style="@style/english"
+                    android:text="Dump truck" />
+
+                <TextView
+                    android:id="@+id/tvDumptruck"
+                    style="@style/translate"
+                    android:text="Самосвал" />
+
+                <ImageView
+                    android:id="@+id/ivDumptruck"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tractor"
+                    style="@style/english"
+                    android:text="Tractor" />
+
+                <TextView
+                    android:id="@+id/tvTractor"
+                    style="@style/translate"
+                    android:text="Трактор" />
+
+                <ImageView
+                    android:id="@+id/ivTractor"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/motorcycle"
+                    style="@style/english"
+                    android:text="Motorcycle" />
+
+                <TextView
+                    android:id="@+id/tvMotorcycle"
+                    style="@style/translate"
+                    android:text="Мотоцикл" />
+
+                <ImageView
+                    android:id="@+id/ivMotorcycle"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/bike"
+                    style="@style/english"
+                    android:text="Bike, Bicycle" />
+
+                <TextView
+                    android:id="@+id/tvBike"
+                    style="@style/translate"
+                    android:text="Велосипед" />
+
+                <ImageView
+                    android:id="@+id/ivBike"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/taxi"
+                    style="@style/english"
+                    android:text="Taxi" />
+
+                <TextView
+                    android:id="@+id/tvTaxi"
+                    style="@style/translate"
+                    android:text="Такси" />
+
+                <ImageView
+                    android:id="@+id/ivTaxi"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/minibus"
+                    style="@style/english"
+                    android:text="Minibus, Van" />
+
+                <TextView
+                    android:id="@+id/tvMinibus"
+                    style="@style/translate"
+                    android:text="Микроавтобус" />
+
+                <ImageView
+                    android:id="@+id/ivMinibus"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/train"
+                    style="@style/english"
+                    android:text="Train" />
+
+                <TextView
+                    android:id="@+id/tvTrain"
+                    style="@style/translate"
+                    android:text="Поезд" />
+
+                <ImageView
+                    android:id="@+id/ivTrain"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/electrictrain"
+                    style="@style/english"
+                    android:text="Electric train" />
+
+                <TextView
+                    android:id="@+id/tvElectrictrain"
+                    style="@style/translate"
+                    android:text="Электричка" />
+
+                <ImageView
+                    android:id="@+id/ivElectrictrain"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/airplane"
+                    style="@style/english"
+                    android:text="Airplane" />
+
+                <TextView
+                    android:id="@+id/tvAirplane"
+                    style="@style/translate"
+                    android:text="Самолет" />
+
+                <ImageView
+                    android:id="@+id/ivAirplane"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/conveyor"
+                    style="@style/english"
+                    android:text="Conveyor" />
+
+                <TextView
+                    android:id="@+id/tvConveyor"
+                    style="@style/translate"
+                    android:text="Транспортер" />
+
+                <ImageView
+                    android:id="@+id/ivConveyor"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/horsedrawn"
+                    style="@style/english"
+                    android:text="Horse-drawn" />
+
+                <TextView
+                    android:id="@+id/tvHorsedrawn"
+                    style="@style/translate"
+                    android:text="Гужевой транспорт" />
+
+                <ImageView
+                    android:id="@+id/ivHorsedrawn"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/metro"
+                    style="@style/english"
+                    android:text="Metro" />
+
+                <TextView
+                    android:id="@+id/tvMetro"
+                    style="@style/translate"
+                    android:text="Метро" />
+
+                <ImageView
+                    android:id="@+id/ivMetro"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/helicopter"
+                    style="@style/english"
+                    android:text="Helicopter" />
+
+                <TextView
+                    android:id="@+id/tvHelicopter"
+                    style="@style/translate"
+                    android:text="Вертолет" />
+
+                <ImageView
+                    android:id="@+id/ivHelicopter"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ship"
+                    style="@style/english"
+                    android:text="Ship" />
+
+                <TextView
+                    android:id="@+id/tvShip"
+                    style="@style/translate"
+                    android:text="Корабль" />
+
+                <ImageView
+                    android:id="@+id/ivShip"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mope"
+                    style="@style/english"
+                    android:text="Mope" />
+
+                <TextView
+                    android:id="@+id/tvMope"
+                    style="@style/translate"
+                    android:text="Мопед" />
+
+                <ImageView
+                    android:id="@+id/ivMope"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/boat"
+                    style="@style/english"
+                    android:text="Boat" />
+
+                <TextView
+                    android:id="@+id/tvBoat"
+                    style="@style/translate"
+                    android:text="Лодка" />
+
+                <ImageView
+                    android:id="@+id/ivBoat"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/yacht"
+                    style="@style/english"
+                    android:text="Yacht" />
+
+                <TextView
+                    android:id="@+id/tvYacht"
+                    style="@style/translate"
+                    android:text="Яхта" />
+
+                <ImageView
+                    android:id="@+id/ivYacht"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/barge"
+                    style="@style/english"
+                    android:text="Barge" />
+
+                <TextView
+                    android:id="@+id/tvBarge"
+                    style="@style/translate"
+                    android:text="Баржа" />
+
+                <ImageView
+                    android:id="@+id/ivBarge"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/circle_new"
+    tools:context=".fragments.newwords.WashRoomFragment">
+
+    <ImageView
+        android:id="@+id/ivBackToNewWordsList"
+        android:layout_width="78dp"
+        android:layout_height="42dp"
+        android:src="@drawable/backnote"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBackToNewWordsList"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ocean"
+                    style="@style/english"
+                    android:text="Ocean" />
+
+                <TextView
+                    android:id="@+id/tvOcean"
+                    style="@style/translate"
+                    android:text="Океан" />
+
+                <ImageView
+                    android:id="@+id/ivOcean"
+                    style="@style/image_to_main"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sea"
+                    style="@style/english"
+                    android:text="Sea" />
+
+                <TextView
+                    android:id="@+id/tvSea"
+                    style="@style/translate"
+                    android:text="Море" />
+
+                <ImageView
+                    android:id="@+id/ivSea"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/river"
+                    style="@style/english"
+                    android:text="River" />
+
+                <TextView
+                    android:id="@+id/tvRiver"
+                    style="@style/translate"
+                    android:text="Река" />
+
+                <ImageView
+                    android:id="@+id/ivRiver"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lake"
+                    style="@style/english"
+                    android:text="Lake" />
+
+                <TextView
+                    android:id="@+id/tvLake"
+                    style="@style/translate"
+                    android:text="Озеро" />
+
+                <ImageView
+                    android:id="@+id/ivLake"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/iceberg"
+                    style="@style/english"
+                    android:text="Iceberg" />
+
+                <TextView
+                    android:id="@+id/tvIceberg"
+                    style="@style/translate"
+                    android:text="Айсберг" />
+
+                <ImageView
+                    android:id="@+id/ivIceberg"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/cape"
+                    style="@style/english"
+                    android:text="Cape" />
+
+                <TextView
+                    android:id="@+id/tvCape"
+                    style="@style/translate"
+                    android:text="Мыс" />
+
+                <ImageView
+                    android:id="@+id/ivCape"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/fjord"
+                    style="@style/english"
+                    android:text="Fjord" />
+
+                <TextView
+                    android:id="@+id/tvFjord"
+                    style="@style/translate"
+                    android:text="Фьорд" />
+
+                <ImageView
+                    android:id="@+id/ivFjord"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/bay"
+                    style="@style/english"
+                    android:text="Bay" />
+
+                <TextView
+                    android:id="@+id/tvBay"
+                    style="@style/translate"
+                    android:text="Залив" />
+
+                <ImageView
+                    android:id="@+id/ivBay"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/basin"
+                    style="@style/english"
+                    android:text="Basin" />
+
+                <TextView
+                    android:id="@+id/tvBasin"
+                    style="@style/translate"
+                    android:text="Бассейн" />
+
+                <ImageView
+                    android:id="@+id/ivBasin"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/waterfall"
+                    style="@style/english"
+                    android:text="Waterfall" />
+
+                <TextView
+                    android:id="@+id/tvWaterfall"
+                    style="@style/translate"
+                    android:text="Водопад" />
+
+                <ImageView
+                    android:id="@+id/ivWaterfall"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/strait"
+                    style="@style/english"
+                    android:text="Strait" />
+
+                <TextView
+                    android:id="@+id/tvStrait"
+                    style="@style/translate"
+                    android:text="Пролив" />
+
+                <ImageView
+                    android:id="@+id/ivStrait"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/channel"
+                    style="@style/english"
+                    android:text="Channel" />
+
+                <TextView
+                    android:id="@+id/tvChannel"
+                    style="@style/translate"
+                    android:text="Канал" />
+
+                <ImageView
+                    android:id="@+id/ivChannel"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/swamp"
+                    style="@style/english"
+                    android:text="Swamp" />
+
+                <TextView
+                    android:id="@+id/tvSwamp"
+                    style="@style/translate"
+                    android:text="Болото" />
+
+                <ImageView
+                    android:id="@+id/ivSwamp"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/beach"
+                    style="@style/english"
+                    android:text="Beach" />
+
+                <TextView
+                    android:id="@+id/tvBeach"
+                    style="@style/translate"
+                    android:text="Пляж" />
+
+                <ImageView
+                    android:id="@+id/ivBeach"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/peninsula"
+                    style="@style/english"
+                    android:text="Peninsula" />
+
+                <TextView
+                    android:id="@+id/tvPeninsula"
+                    style="@style/translate"
+                    android:text="Полуостров" />
+
+                <ImageView
+                    android:id="@+id/ivPeninsula"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/island"
+                    style="@style/english"
+                    android:text="Island" />
+
+                <TextView
+                    android:id="@+id/tvIsland"
+                    style="@style/translate"
+                    android:text="Остров" />
+
+                <ImageView
+                    android:id="@+id/ivIsland"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/archipelago"
+                    style="@style/english"
+                    android:text="Archipelago" />
+
+                <TextView
+                    android:id="@+id/tvArchipelago"
+                    style="@style/translate"
+                    android:text="Архипелаг" />
+
+                <ImageView
+                    android:id="@+id/ivArchipelago"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/coast"
+                    style="@style/english"
+                    android:text="Coast" />
+
+                <TextView
+                    android:id="@+id/tvCoast"
+                    style="@style/translate"
+                    android:text="Побережье" />
+
+                <ImageView
+                    android:id="@+id/ivCoast"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/gulf"
+                    style="@style/english"
+                    android:text="Gulf" />
+
+                <TextView
+                    android:id="@+id/tvGulf"
+                    style="@style/translate"
+                    android:text="Залив" />
+
+                <ImageView
+                    android:id="@+id/ivGulf"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/delta"
+                    style="@style/english"
+                    android:text="Delta" />
+
+                <TextView
+                    android:id="@+id/tvDelta"
+                    style="@style/translate"
+                    android:text="Дельта" />
+
+                <ImageView
+                    android:id="@+id/ivDelta"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/oasis"
+                    style="@style/english"
+                    android:text="Oasis" />
+
+                <TextView
+                    android:id="@+id/tvOasis"
+                    style="@style/translate"
+                    android:text="Оазис" />
+
+                <ImageView
+                    android:id="@+id/ivOasis"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/geyser"
+                    style="@style/english"
+                    android:text="Geyser" />
+
+                <TextView
+                    android:id="@+id/tvGeyser"
+                    style="@style/translate"
+                    android:text="Гейзер" />
+
+                <ImageView
+                    android:id="@+id/ivGeyser"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/glacier"
+                    style="@style/english"
+                    android:text="Glacier" />
+
+                <TextView
+                    android:id="@+id/tvGlacier"
+                    style="@style/translate"
+                    android:text="Ледник" />
+
+                <ImageView
+                    android:id="@+id/ivGlacier"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/flow"
+                    style="@style/english"
+                    android:text="Flow" />
+
+                <TextView
+                    android:id="@+id/tvFlow"
+                    style="@style/translate"
+                    android:text="Течение" />
+
+                <ImageView
+                    android:id="@+id/ivFlow"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/depth"
+                    style="@style/english"
+                    android:text="Depth" />
+
+                <TextView
+                    android:id="@+id/tvDepth"
+                    style="@style/translate"
+                    android:text="Глубина" />
+
+                <ImageView
+                    android:id="@+id/ivDepth"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/wave"
+                    style="@style/english"
+                    android:text="Wave" />
+
+                <TextView
+                    android:id="@+id/tvWave"
+                    style="@style/translate"
+                    android:text="Волна" />
+
+                <ImageView
+                    android:id="@+id/ivWave"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/surf"
+                    style="@style/english"
+                    android:text="Surf" />
+
+                <TextView
+                    android:id="@+id/tvSurf"
+                    style="@style/translate"
+                    android:text="Прибой" />
+
+                <ImageView
+                    android:id="@+id/ivSurf"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/stream"
+                    style="@style/english"
+                    android:text="Stream" />
+
+                <TextView
+                    android:id="@+id/tvStream"
+                    style="@style/translate"
+                    android:text="Ручей" />
+
+                <ImageView
+                    android:id="@+id/ivStream"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/spring"
+                    style="@style/english"
+                    android:text="Spring" />
+
+                <TextView
+                    android:id="@+id/tvSpring"
+                    style="@style/translate"
+                    android:text="Родник" />
+
+                <ImageView
+                    android:id="@+id/ivSpring"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

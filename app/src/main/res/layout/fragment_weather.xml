@@ -1,0 +1,1476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/circle_new"
+    tools:context=".fragments.newwords.WashRoomFragment">
+
+    <ImageView
+        android:id="@+id/ivBackToNewWordsList"
+        android:layout_width="78dp"
+        android:layout_height="42dp"
+        android:src="@drawable/backnote"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBackToNewWordsList"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/weather"
+                    style="@style/english"
+                    android:text="Weather" />
+
+                <TextView
+                    android:id="@+id/tvWeather"
+                    style="@style/translate"
+                    android:text="Погода" />
+
+                <ImageView
+                    android:id="@+id/ivWeather"
+                    style="@style/image_to_main"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/winter"
+                    style="@style/english"
+                    android:text="Winter" />
+
+                <TextView
+                    android:id="@+id/tvWinter"
+                    style="@style/translate"
+                    android:text="Зима" />
+
+                <ImageView
+                    android:id="@+id/ivWinter"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/autumn"
+                    style="@style/english"
+                    android:text="Autumn" />
+
+                <TextView
+                    android:id="@+id/tvAutumn"
+                    style="@style/translate"
+                    android:text="Осень" />
+
+                <ImageView
+                    android:id="@+id/ivAutumn"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/summer"
+                    style="@style/english"
+                    android:text="Summer" />
+
+                <TextView
+                    android:id="@+id/tvSummer"
+                    style="@style/translate"
+                    android:text="Лето" />
+
+                <ImageView
+                    android:id="@+id/ivSummer"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/spring"
+                    style="@style/english"
+                    android:text="Spring" />
+
+                <TextView
+                    android:id="@+id/tvSpring"
+                    style="@style/translate"
+                    android:text="Весна" />
+
+                <ImageView
+                    android:id="@+id/ivSpring"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/wind"
+                    style="@style/english"
+                    android:text="Wind" />
+
+                <TextView
+                    android:id="@+id/tvWind"
+                    style="@style/translate"
+                    android:text="Ветер" />
+
+                <ImageView
+                    android:id="@+id/ivWind"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/hurricane"
+                    style="@style/english"
+                    android:text="Hurricane" />
+
+                <TextView
+                    android:id="@+id/tvHurricane"
+                    style="@style/translate"
+                    android:text="Ураган" />
+
+                <ImageView
+                    android:id="@+id/ivHurricane"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/storms"
+                    style="@style/english"
+                    android:text="Storm" />
+
+                <TextView
+                    android:id="@+id/tvStorms"
+                    style="@style/translate"
+                    android:text="Буря" />
+
+                <ImageView
+                    android:id="@+id/ivStorms"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/snowstorm"
+                    style="@style/english"
+                    android:text="Snowstorm" />
+
+                <TextView
+                    android:id="@+id/tvSnowstorm"
+                    style="@style/translate"
+                    android:text="Буран" />
+
+                <ImageView
+                    android:id="@+id/ivSnowstorm"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/blizzard"
+                    style="@style/english"
+                    android:text="Blizzard" />
+
+                <TextView
+                    android:id="@+id/tvBlizzard"
+                    style="@style/translate"
+                    android:text="Метель" />
+
+                <ImageView
+                    android:id="@+id/ivBlizzard"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/snow"
+                    style="@style/english"
+                    android:text="Snow" />
+
+                <TextView
+                    android:id="@+id/tvSnow"
+                    style="@style/translate"
+                    android:text="Снег" />
+
+                <ImageView
+                    android:id="@+id/ivSnow"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ices"
+                    style="@style/english"
+                    android:text="Ice" />
+
+                <TextView
+                    android:id="@+id/tvIces"
+                    style="@style/translate"
+                    android:text="Лед" />
+
+                <ImageView
+                    android:id="@+id/ivIces"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/rain"
+                    style="@style/english"
+                    android:text="Rain" />
+
+                <TextView
+                    android:id="@+id/tvRain"
+                    style="@style/translate"
+                    android:text="Дождь" />
+
+                <ImageView
+                    android:id="@+id/ivRain"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/fog"
+                    style="@style/english"
+                    android:text="Fog" />
+
+                <TextView
+                    android:id="@+id/tvFog"
+                    style="@style/translate"
+                    android:text="Туман" />
+
+                <ImageView
+                    android:id="@+id/ivFog"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/precipitation"
+                    style="@style/english"
+                    android:text="Precipitation" />
+
+                <TextView
+                    android:id="@+id/tvPrecipitation"
+                    style="@style/translate"
+                    android:text="Осадки" />
+
+                <ImageView
+                    android:id="@+id/ivPrecipitation"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/drizzle"
+                    style="@style/english"
+                    android:text="Drizzle" />
+
+                <TextView
+                    android:id="@+id/tvDrizzle"
+                    style="@style/translate"
+                    android:text="Морось" />
+
+                <ImageView
+                    android:id="@+id/ivDrizzle"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/freezing"
+                    style="@style/english"
+                    android:text="Freezing" />
+
+                <TextView
+                    android:id="@+id/tvFreezing"
+                    style="@style/translate"
+                    android:text="Мороз" />
+
+                <ImageView
+                    android:id="@+id/ivFreezing"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sun"
+                    style="@style/english"
+                    android:text="Sun" />
+
+                <TextView
+                    android:id="@+id/tvSun"
+                    style="@style/translate"
+                    android:text="Солнце" />
+
+                <ImageView
+                    android:id="@+id/ivSun"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sky"
+                    style="@style/english"
+                    android:text="Sky" />
+
+                <TextView
+                    android:id="@+id/tvSky"
+                    style="@style/translate"
+                    android:text="Небо" />
+
+                <ImageView
+                    android:id="@+id/ivSky"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/clouds"
+                    style="@style/english"
+                    android:text="Cloud" />
+
+                <TextView
+                    android:id="@+id/tvClouds"
+                    style="@style/translate"
+                    android:text="Туча" />
+
+                <ImageView
+                    android:id="@+id/ivClouds"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/cloud"
+                    style="@style/english"
+                    android:text="Cloud" />
+
+                <TextView
+                    android:id="@+id/tvCloud"
+                    style="@style/translate"
+                    android:text="Облако" />
+
+                <ImageView
+                    android:id="@+id/ivCloud"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/storm"
+                    style="@style/english"
+                    android:text="Storm" />
+
+                <TextView
+                    android:id="@+id/tvStorm"
+                    style="@style/translate"
+                    android:text="Шторм" />
+
+                <ImageView
+                    android:id="@+id/ivStorm"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/clear"
+                    style="@style/english"
+                    android:text="Clear" />
+
+                <TextView
+                    android:id="@+id/tvClear"
+                    style="@style/translate"
+                    android:text="Ясно" />
+
+                <ImageView
+                    android:id="@+id/ivClear"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mainlycloudy"
+                    style="@style/english"
+                    android:text="Mainly cloudy" />
+
+                <TextView
+                    android:id="@+id/tvMainlycloudy"
+                    style="@style/translate"
+                    android:text="Пасмурно" />
+
+                <ImageView
+                    android:id="@+id/ivMainlycloudy"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/frost"
+                    style="@style/english"
+                    android:text="Frost" />
+
+                <TextView
+                    android:id="@+id/tvFrost"
+                    style="@style/translate"
+                    android:text="Иней" />
+
+                <ImageView
+                    android:id="@+id/ivFrost"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ice"
+                    style="@style/english"
+                    android:text="Ice" />
+
+                <TextView
+                    android:id="@+id/tvIce"
+                    style="@style/translate"
+                    android:text="Гололед" />
+
+                <ImageView
+                    android:id="@+id/ivIce"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/warm"
+                    style="@style/english"
+                    android:text="Warm" />
+
+                <TextView
+                    android:id="@+id/tvWarm"
+                    style="@style/translate"
+                    android:text="Тепло" />
+
+                <ImageView
+                    android:id="@+id/ivWarm"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/cold"
+                    style="@style/english"
+                    android:text="Cold" />
+
+                <TextView
+                    android:id="@+id/tvCold"
+                    style="@style/translate"
+                    android:text="Холодно" />
+
+                <ImageView
+                    android:id="@+id/ivCold"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/temperature"
+                    style="@style/english"
+                    android:text="Temperature" />
+
+                <TextView
+                    android:id="@+id/tvTemperature"
+                    style="@style/translate"
+                    android:text="Температура" />
+
+                <ImageView
+                    android:id="@+id/ivTemperature"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/weatherforecast"
+                    style="@style/english"
+                    android:text="Weather forecast" />
+
+                <TextView
+                    android:id="@+id/tvWeatherforecast"
+                    style="@style/translate"
+                    android:text="Прогноз погоды" />
+
+                <ImageView
+                    android:id="@+id/ivWeatherforecast"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/degree"
+                    style="@style/english"
+                    android:text="Degree" />
+
+                <TextView
+                    android:id="@+id/tvDegree"
+                    style="@style/translate"
+                    android:text="Градус" />
+
+                <ImageView
+                    android:id="@+id/ivDegree"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/dry"
+                    style="@style/english"
+                    android:text="Dry" />
+
+                <TextView
+                    android:id="@+id/tvDry"
+                    style="@style/translate"
+                    android:text="Сухо" />
+
+                <ImageView
+                    android:id="@+id/ivDry"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/freshness"
+                    style="@style/english"
+                    android:text="Freshness" />
+
+                <TextView
+                    android:id="@+id/tvFreshness"
+                    style="@style/translate"
+                    android:text="Свежесть" />
+
+                <ImageView
+                    android:id="@+id/ivFreshness"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/heat"
+                    style="@style/english"
+                    android:text="Heat" />
+
+                <TextView
+                    android:id="@+id/tvHeat"
+                    style="@style/translate"
+                    android:text="Жара, Зной" />
+
+                <ImageView
+                    android:id="@+id/ivHeat"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/humidity"
+                    style="@style/english"
+                    android:text="Humidity" />
+
+                <TextView
+                    android:id="@+id/tvHumidity"
+                    style="@style/translate"
+                    android:text="Влажность" />
+
+                <ImageView
+                    android:id="@+id/ivHumidity"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/gustwind"
+                    style="@style/english"
+                    android:text="Gust wind" />
+
+                <TextView
+                    android:id="@+id/tvGustwind"
+                    style="@style/translate"
+                    android:text="Порыв ветра" />
+
+                <ImageView
+                    android:id="@+id/ivGustwind"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/squall"
+                    style="@style/english"
+                    android:text="Squall" />
+
+                <TextView
+                    android:id="@+id/tvSquall"
+                    style="@style/translate"
+                    android:text="Шквал" />
+
+                <ImageView
+                    android:id="@+id/ivSquall"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tornado"
+                    style="@style/english"
+                    android:text="Tornado" />
+
+                <TextView
+                    android:id="@+id/tvTornado"
+                    style="@style/translate"
+                    android:text="Торнадо, Смерч" />
+
+                <ImageView
+                    android:id="@+id/ivTornado"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/visibility"
+                    style="@style/english"
+                    android:text="Visibility" />
+
+                <TextView
+                    android:id="@+id/tvVisibility"
+                    style="@style/translate"
+                    android:text="Видимость" />
+
+                <ImageView
+                    android:id="@+id/ivVisibility"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lightning"
+                    style="@style/english"
+                    android:text="Lightning" />
+
+                <TextView
+                    android:id="@+id/tvLightning"
+                    style="@style/translate"
+                    android:text="Молния" />
+
+                <ImageView
+                    android:id="@+id/ivLightning"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/thunder"
+                    style="@style/english"
+                    android:text="Thunder" />
+
+                <TextView
+                    android:id="@+id/tvThunder"
+                    style="@style/translate"
+                    android:text="Гром" />
+
+                <ImageView
+                    android:id="@+id/ivThunder"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/thunderstorm"
+                    style="@style/english"
+                    android:text="Thunderstorm" />
+
+                <TextView
+                    android:id="@+id/tvThunderstorm"
+                    style="@style/translate"
+                    android:text="Гроза" />
+
+                <ImageView
+                    android:id="@+id/ivThunderstorm"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/dew"
+                    style="@style/english"
+                    android:text="Dew" />
+
+                <TextView
+                    android:id="@+id/tvDew"
+                    style="@style/translate"
+                    android:text="Роса" />
+
+                <ImageView
+                    android:id="@+id/ivDew"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/hail"
+                    style="@style/english"
+                    android:text="Hail" />
+
+                <TextView
+                    android:id="@+id/tvHail"
+                    style="@style/translate"
+                    android:text="Град" />
+
+                <ImageView
+                    android:id="@+id/ivHail"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/dampness"
+                    style="@style/english"
+                    android:text="Dampness" />
+
+                <TextView
+                    android:id="@+id/tvDampness"
+                    style="@style/translate"
+                    android:text="Сырость" />
+
+                <ImageView
+                    android:id="@+id/ivDampness"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/haze"
+                    style="@style/english"
+                    android:text="Haze" />
+
+                <TextView
+                    android:id="@+id/tvHaze"
+                    style="@style/translate"
+                    android:text="Дымка" />
+
+                <ImageView
+                    android:id="@+id/ivHaze"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/shower"
+                    style="@style/english"
+                    android:text="Shower" />
+
+                <TextView
+                    android:id="@+id/tvShower"
+                    style="@style/translate"
+                    android:text="Ливень" />
+
+                <ImageView
+                    android:id="@+id/ivShower"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/snowdrift"
+                    style="@style/english"
+                    android:text="Snowdrift" />
+
+                <TextView
+                    android:id="@+id/tvSnowdrift"
+                    style="@style/translate"
+                    android:text="Сугроб" />
+
+                <ImageView
+                    android:id="@+id/ivSnowdrift"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/snowflake"
+                    style="@style/english"
+                    android:text="Snowflake" />
+
+                <TextView
+                    android:id="@+id/tvSnowflake"
+                    style="@style/translate"
+                    android:text="Снежинка" />
+
+                <ImageView
+                    android:id="@+id/ivSnowflake"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/dirt"
+                    style="@style/english"
+                    android:text="Dirt" />
+
+                <TextView
+                    android:id="@+id/tvDirt"
+                    style="@style/translate"
+                    android:text="Грязь" />
+
+                <ImageView
+                    android:id="@+id/ivDirt"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/rainbow"
+                    style="@style/english"
+                    android:text="Rainbow" />
+
+                <TextView
+                    android:id="@+id/tvRainbow"
+                    style="@style/translate"
+                    android:text="Радуга" />
+
+                <ImageView
+                    android:id="@+id/ivRainbow"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/flood"
+                    style="@style/english"
+                    android:text="Flood" />
+
+                <TextView
+                    android:id="@+id/tvFlood"
+                    style="@style/translate"
+                    android:text="Наводнение" />
+
+                <ImageView
+                    android:id="@+id/ivFlood"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tsunami"
+                    style="@style/english"
+                    android:text="Tsunami" />
+
+                <TextView
+                    android:id="@+id/tvTsunami"
+                    style="@style/translate"
+                    android:text="Цунами" />
+
+                <ImageView
+                    android:id="@+id/ivTsunami"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/drought"
+                    style="@style/english"
+                    android:text="Drought" />
+
+                <TextView
+                    android:id="@+id/tvDrought"
+                    style="@style/translate"
+                    android:text="Засуха" />
+
+                <ImageView
+                    android:id="@+id/ivDrought"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/icicle"
+                    style="@style/english"
+                    android:text="Icicle" />
+
+                <TextView
+                    android:id="@+id/tvIcicle"
+                    style="@style/translate"
+                    android:text="Сосулька" />
+
+                <ImageView
+                    android:id="@+id/ivIcicle"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/paddle"
+                    style="@style/english"
+                    android:text="Paddle" />
+
+                <TextView
+                    android:id="@+id/tvPaddle"
+                    style="@style/translate"
+                    android:text="Лужа" />
+
+                <ImageView
+                    android:id="@+id/ivPaddle"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/dark"
+                    style="@style/english"
+                    android:text="Dark" />
+
+                <TextView
+                    android:id="@+id/tvDark"
+                    style="@style/translate"
+                    android:text="Темно" />
+
+                <ImageView
+                    android:id="@+id/ivDark"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sunrise"
+                    style="@style/english"
+                    android:text="Sinrise" />
+
+                <TextView
+                    android:id="@+id/tvSunrise"
+                    style="@style/translate"
+                    android:text="Восход" />
+
+                <ImageView
+                    android:id="@+id/ivSunrise"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sunset"
+                    style="@style/english"
+                    android:text="Sunset" />
+
+                <TextView
+                    android:id="@+id/tvSunset"
+                    style="@style/translate"
+                    android:text="Закат" />
+
+                <ImageView
+                    android:id="@+id/ivSunset"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/thaw"
+                    style="@style/english"
+                    android:text="Thaw" />
+
+                <TextView
+                    android:id="@+id/tvThaw"
+                    style="@style/translate"
+                    android:text="Оттепель" />
+
+                <ImageView
+                    android:id="@+id/ivThaw"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

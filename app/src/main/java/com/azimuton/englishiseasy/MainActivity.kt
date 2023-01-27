@@ -60,6 +60,12 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.flMain, FrasalsFragment())
                 .commit()
         }
+        binding.llNewWords.setOnClickListener {
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.flMain, NewWordsFragment())
+                .commit()
+        }
     }
     override fun onResume() {
         super.onResume()

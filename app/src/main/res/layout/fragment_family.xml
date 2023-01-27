@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/circle_new"
+    tools:context=".fragments.newwords.WashRoomFragment">
+
+    <ImageView
+        android:id="@+id/ivBackToNewWordsList"
+        android:layout_width="78dp"
+        android:layout_height="42dp"
+        android:src="@drawable/backnote"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBackToNewWordsList"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mother"
+                    style="@style/english"
+                    android:text="Mother" />
+
+                <TextView
+                    android:id="@+id/tvMother"
+                    style="@style/translate"
+                    android:text="Мама" />
+
+                <ImageView
+                    android:id="@+id/ivMother"
+                    style="@style/image_to_main"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/father"
+                    style="@style/english"
+                    android:text="Father" />
+
+                <TextView
+                    android:id="@+id/tvFather"
+                    style="@style/translate"
+                    android:text="Папа" />
+
+                <ImageView
+                    android:id="@+id/ivFather"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sister"
+                    style="@style/english"
+                    android:text="Sister" />
+
+                <TextView
+                    android:id="@+id/tvSister"
+                    style="@style/translate"
+                    android:text="Сестра" />
+
+                <ImageView
+                    android:id="@+id/ivSister"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/brother"
+                    style="@style/english"
+                    android:text="Brother" />
+
+                <TextView
+                    android:id="@+id/tvBrother"
+                    style="@style/translate"
+                    android:text="Брат" />
+
+                <ImageView
+                    android:id="@+id/ivBrother"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/wife"
+                    style="@style/english"
+                    android:text="Wife" />
+
+                <TextView
+                    android:id="@+id/tvWife"
+                    style="@style/translate"
+                    android:text="Жена" />
+
+                <ImageView
+                    android:id="@+id/ivWife"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/husband"
+                    style="@style/english"
+                    android:text="Husband" />
+
+                <TextView
+                    android:id="@+id/tvHusband"
+                    style="@style/translate"
+                    android:text="Муж" />
+
+                <ImageView
+                    android:id="@+id/ivHusband"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/son"
+                    style="@style/english"
+                    android:text="Son" />
+
+                <TextView
+                    android:id="@+id/tvSon"
+                    style="@style/translate"
+                    android:text="Сын" />
+
+                <ImageView
+                    android:id="@+id/ivSon"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/daughter"
+                    style="@style/english"
+                    android:text="Daughter" />
+
+                <TextView
+                    android:id="@+id/tvDaughter"
+                    style="@style/translate"
+                    android:text="Дочь" />
+
+                <ImageView
+                    android:id="@+id/ivDaughter"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/grandmother"
+                    style="@style/english"
+                    android:text="Grandmother" />
+
+                <TextView
+                    android:id="@+id/tvGrandmother"
+                    style="@style/translate"
+                    android:text="Бабушка" />
+
+                <ImageView
+                    android:id="@+id/ivGrandmother"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/grandfather"
+                    style="@style/english"
+                    android:text="Grandfather" />
+
+                <TextView
+                    android:id="@+id/tvGrandfather"
+                    style="@style/translate"
+                    android:text="Дедушка" />
+
+                <ImageView
+                    android:id="@+id/ivGrandfather"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/fatherinlaw"
+                    style="@style/english"
+                    android:text="Father-In-Law" />
+
+                <TextView
+                    android:id="@+id/tvFatherInLaw"
+                    style="@style/translate"
+                    android:text="Тесть" />
+
+                <ImageView
+                    android:id="@+id/ivFatherInLaw"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/motherinlaw"
+                    style="@style/english"
+                    android:text="Mother-In-Law" />
+
+                <TextView
+                    android:id="@+id/tvMotherInLaw"
+                    style="@style/translate"
+                    android:text="Теща" />
+
+                <ImageView
+                    android:id="@+id/ivMotherInLaw"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/brotherinlaw"
+                    style="@style/english"
+                    android:text="Brother-In-Law" />
+
+                <TextView
+                    android:id="@+id/tvBrotherInLaw"
+                    style="@style/translate"
+                    android:text="Зять" />
+
+                <ImageView
+                    android:id="@+id/ivBrotherInLaw"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sisterinlaw"
+                    style="@style/english"
+                    android:text="Sister-In-Law" />
+
+                <TextView
+                    android:id="@+id/tvSisterInLaw"
+                    style="@style/translate"
+                    android:text="Невестка" />
+
+                <ImageView
+                    android:id="@+id/ivSisterInLaw"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/niece"
+                    style="@style/english"
+                    android:text="Niece" />
+
+                <TextView
+                    android:id="@+id/tvNiece"
+                    style="@style/translate"
+                    android:text="Племянница" />
+
+                <ImageView
+                    android:id="@+id/ivNiece"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nephew"
+                    style="@style/english"
+                    android:text="Nephew" />
+
+                <TextView
+                    android:id="@+id/tvNephew"
+                    style="@style/translate"
+                    android:text="Племянник" />
+
+                <ImageView
+                    android:id="@+id/ivNephew"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/uncle"
+                    style="@style/english"
+                    android:text="Uncle" />
+
+                <TextView
+                    android:id="@+id/tvUncle"
+                    style="@style/translate"
+                    android:text="Дядя" />
+
+                <ImageView
+                    android:id="@+id/ivUncle"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/aunt"
+                    style="@style/english"
+                    android:text="Aunt" />
+
+                <TextView
+                    android:id="@+id/tvAunt"
+                    style="@style/translate"
+                    android:text="Тетя" />
+
+                <ImageView
+                    android:id="@+id/ivAunt"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

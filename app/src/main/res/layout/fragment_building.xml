@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/circle_new"
+    tools:context=".fragments.newwords.WashRoomFragment">
+
+    <ImageView
+        android:id="@+id/ivBackToNewWordsList"
+        android:layout_width="78dp"
+        android:layout_height="42dp"
+        android:src="@drawable/backnote"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBackToNewWordsList"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/building"
+                    style="@style/english"
+                    android:text="Building" />
+
+                <TextView
+                    android:id="@+id/tvBuilding"
+                    style="@style/translate"
+                    android:text="Здание" />
+
+                <ImageView
+                    android:id="@+id/ivBuilding"
+                    style="@style/image_to_main"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/windows"
+                    style="@style/english"
+                    android:text="Window" />
+
+                <TextView
+                    android:id="@+id/tvWindow"
+                    style="@style/translate"
+                    android:text="Окно" />
+
+                <ImageView
+                    android:id="@+id/ivWindow"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/door"
+                    style="@style/english"
+                    android:text="Door" />
+
+                <TextView
+                    android:id="@+id/tvDoor"
+                    style="@style/translate"
+                    android:text="Дверь" />
+
+                <ImageView
+                    android:id="@+id/ivDoor"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/floor"
+                    style="@style/english"
+                    android:text="Floor" />
+
+                <TextView
+                    android:id="@+id/tvFloor"
+                    style="@style/translate"
+                    android:text="Пол" />
+
+                <ImageView
+                    android:id="@+id/ivFloor"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ceiling"
+                    style="@style/english"
+                    android:text="Ceiling" />
+
+                <TextView
+                    android:id="@+id/tvCeiling"
+                    style="@style/translate"
+                    android:text="Потолок" />
+
+                <ImageView
+                    android:id="@+id/ivCeiling"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/wall"
+                    style="@style/english"
+                    android:text="Wall" />
+
+                <TextView
+                    android:id="@+id/tvWall"
+                    style="@style/translate"
+                    android:text="Стена" />
+
+                <ImageView
+                    android:id="@+id/ivWall"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/floors"
+                    style="@style/english"
+                    android:text="Floor" />
+
+                <TextView
+                    android:id="@+id/tvFloors"
+                    style="@style/translate"
+                    android:text="Этаж" />
+
+                <ImageView
+                    android:id="@+id/ivFloors"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/roof"
+                    style="@style/english"
+                    android:text="Roof" />
+
+                <TextView
+                    android:id="@+id/tvRoof"
+                    style="@style/translate"
+                    android:text="Крыша" />
+
+                <ImageView
+                    android:id="@+id/ivRoof"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/basement"
+                    style="@style/english"
+                    android:text="Basement" />
+
+                <TextView
+                    android:id="@+id/tvBasement"
+                    style="@style/translate"
+                    android:text="Подвал" />
+
+                <ImageView
+                    android:id="@+id/ivBasement"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/stairs"
+                    style="@style/english"
+                    android:text="Stairs" />
+
+                <TextView
+                    android:id="@+id/tvStairs"
+                    style="@style/translate"
+                    android:text="Лестница" />
+
+                <ImageView
+                    android:id="@+id/ivStairs"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/elevator"
+                    style="@style/english"
+                    android:text="Elevator" />
+
+                <TextView
+                    android:id="@+id/tvElevator"
+                    style="@style/translate"
+                    android:text="Лифт" />
+
+                <ImageView
+                    android:id="@+id/ivElevator"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/balcony"
+                    style="@style/english"
+                    android:text="Balcony" />
+
+                <TextView
+                    android:id="@+id/tvBalcony"
+                    style="@style/translate"
+                    android:text="Балкон" />
+
+                <ImageView
+                    android:id="@+id/ivBalcony"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/loggia"
+                    style="@style/english"
+                    android:text="Loggia" />
+
+                <TextView
+                    android:id="@+id/tvLoggia"
+                    style="@style/translate"
+                    android:text="Лоджия" />
+
+                <ImageView
+                    android:id="@+id/ivLoggia"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/entrance"
+                    style="@style/english"
+                    android:text="Entrance" />
+
+                <TextView
+                    android:id="@+id/tvEntrance"
+                    style="@style/translate"
+                    android:text="Подъeзд" />
+
+                <ImageView
+                    android:id="@+id/ivEntrance"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/veranda"
+                    style="@style/english"
+                    android:text="Veranda" />
+
+                <TextView
+                    android:id="@+id/tvVeranda"
+                    style="@style/translate"
+                    android:text="Веранда" />
+
+                <ImageView
+                    android:id="@+id/ivVeranda"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/porch"
+                    style="@style/english"
+                    android:text="Porch" />
+
+                <TextView
+                    android:id="@+id/tvPorch"
+                    style="@style/translate"
+                    android:text="Крыльцо" />
+
+                <ImageView
+                    android:id="@+id/ivPorch"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/steps"
+                    style="@style/english"
+                    android:text="Steps" />
+
+                <TextView
+                    android:id="@+id/tvSteps"
+                    style="@style/translate"
+                    android:text="Ступеньки" />
+
+                <ImageView
+                    android:id="@+id/ivSteps"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/railing"
+                    style="@style/english"
+                    android:text="Railing" />
+
+                <TextView
+                    android:id="@+id/tvRailing"
+                    style="@style/translate"
+                    android:text="Перила" />
+
+                <ImageView
+                    android:id="@+id/ivRailing"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/corridor"
+                    style="@style/english"
+                    android:text="Corridor" />
+
+                <TextView
+                    android:id="@+id/tvCorridor"
+                    style="@style/translate"
+                    android:text="Коридор" />
+
+                <ImageView
+                    android:id="@+id/ivCorridor"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/landing"
+                    style="@style/english"
+                    android:text="Landing" />
+
+                <TextView
+                    android:id="@+id/tvLanding"
+                    style="@style/translate"
+                    android:text="Лестничная площадка" />
+
+                <ImageView
+                    android:id="@+id/ivLanding"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/apartment"
+                    style="@style/english"
+                    android:text="Apartment" />
+
+                <TextView
+                    android:id="@+id/tvApartment"
+                    style="@style/translate"
+                    android:text="Лестничная площадка" />
+
+                <ImageView
+                    android:id="@+id/ivApartment"
+                    style="@style/image_to_main"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_set_as" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
