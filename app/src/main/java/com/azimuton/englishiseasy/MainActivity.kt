@@ -66,6 +66,12 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.flMain, NewWordsFragment())
                 .commit()
         }
+        binding.llNews.setOnClickListener {
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.flMain, NewsFragment())
+                .commit()
+        }
     }
     override fun onResume() {
         super.onResume()
