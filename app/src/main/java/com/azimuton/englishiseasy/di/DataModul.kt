@@ -1,13 +1,17 @@
 package com.azimuton.englishiseasy.di
 
+import com.azimuton.data.networkstorage.GetNewsDataSource
+import com.azimuton.data.networkstorage.NewsDataSource
+import com.azimuton.data.repository.networkrepository.NetworkRepositoryImpl
 import com.azimuton.data.repository.roomrepository.LearnedWordsRepositoryImpl
 import com.azimuton.data.repository.roomrepository.WordRepositoryImpl
-import com.azimuton.data.storage.LearnedWordsStorage
-import com.azimuton.data.storage.WordStorage
-import com.azimuton.data.storage.room.LearnedWordStorageRoomImpl
-import com.azimuton.data.storage.room.WordStorageRoomImpl
-import com.azimuton.data.storage.room.dao.LearnedWordsDao
-import com.azimuton.data.storage.room.dao.WordDao
+import com.azimuton.data.roomstorage.LearnedWordsStorage
+import com.azimuton.data.roomstorage.WordStorage
+import com.azimuton.data.roomstorage.room.LearnedWordStorageRoomImpl
+import com.azimuton.data.roomstorage.room.WordStorageRoomImpl
+import com.azimuton.data.roomstorage.room.dao.LearnedWordsDao
+import com.azimuton.data.roomstorage.room.dao.WordDao
+import com.azimuton.domain.repository.networkrepository.NetworkRepository
 import com.azimuton.domain.repository.roomrepository.LearnedWordsRepository
 import com.azimuton.domain.repository.roomrepository.WordRepository
 import dagger.Module
@@ -27,6 +31,11 @@ object DataModule {
     }
     @Singleton
     @Provides
+    fun provideNetworkStorage(): NewsDataSource {
+        return GetNewsDataSource()
+    }
+    @Singleton
+    @Provides
     fun provideLearnedWordsStorage(learnedWordsDao: LearnedWordsDao): LearnedWordsStorage {
         return LearnedWordStorageRoomImpl(learnedWordsDao = learnedWordsDao)
     }
@@ -41,5 +50,10 @@ object DataModule {
     @Provides
     fun provideLearnedWordsRepository(learnedWordsStorage: LearnedWordsStorage): LearnedWordsRepository {
         return  LearnedWordsRepositoryImpl(learnedWordsStorage = learnedWordsStorage)
+    }
+    @Singleton
+    @Provides
+    fun provideNetworkRepository(networkStorage : NewsDataSource): NetworkRepository {
+        return  NetworkRepositoryImpl(newsDataSource = networkStorage)
     }
 }

@@ -13,9 +13,8 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.viewModelScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.azimuton.data.storage.room.AppRoomDatabase
+import com.azimuton.data.roomstorage.room.AppRoomDatabase
 import com.azimuton.domain.models.Word
 import com.azimuton.domain.usecase.*
 import com.azimuton.englishiseasy.MainActivity

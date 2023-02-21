@@ -114,7 +114,8 @@
             android:layout_marginEnd="8dp"
             android:src="@drawable/eyeopen"
             app:layout_constraintEnd_toStartOf="@+id/ivCloseCheckingWord"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/darkgreen" />
 
         <ImageView
             android:id="@+id/ivChangeWords"
@@ -148,7 +149,6 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:text="TextView"
             android:textColor="@color/red"
             android:textSize="20sp"
             android:textStyle="bold|italic"
@@ -166,7 +166,8 @@
             android:src="@drawable/eyeclose"
             android:visibility="gone"
             app:layout_constraintEnd_toStartOf="@+id/ivCloseCheckingWord"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/darkgreen" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

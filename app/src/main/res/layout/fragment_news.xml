@@ -7,27 +7,25 @@
     android:background="@drawable/circle_new"
     tools:context=".fragments.NewsFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvNews"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:visibility="gone"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/gray"
+        android:rotationX="41"
+        android:scaleX="3"
+        android:scaleY="3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="@style/Widget.AppCompat.ProgressBar"
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
-        android:indeterminate="false"
-        android:indeterminateTint="@color/darkgreen"
-        android:progressTint="@color/darkgreen"
-        android:rotationX="53"
-        android:scaleX="4"
-        android:scaleY="4"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNews"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

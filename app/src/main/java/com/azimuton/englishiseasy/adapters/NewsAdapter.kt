@@ -39,9 +39,13 @@ class NewsAdapter(private val contextA: Context, private val listNews: List<Resu
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val listItem = listNews[position]
-        Glide.with(contextA)
-            .load(listNews[position].image_url)
-            .into(holder.image!!)
+        if(listNews[position].image_url != null){
+            Glide.with(contextA)
+                .load(listNews[position].image_url)
+                .into(holder.image!!)
+        } else {
+            holder.image?.setImageResource(R.drawable.errorload)
+        }
         holder.title?.text = listItem.title
 
     }

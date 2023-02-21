@@ -1,8 +1,8 @@
-package com.azimuton.data.storage.room
+package com.azimuton.data.roomstorage.room
 
-import com.azimuton.data.storage.LearnedWordsStorage
-import com.azimuton.data.storage.models.LearnedWordEntity
-import com.azimuton.data.storage.room.dao.LearnedWordsDao
+import com.azimuton.data.roomstorage.LearnedWordsStorage
+import com.azimuton.data.roomstorage.models.LearnedWordEntity
+import com.azimuton.data.roomstorage.room.dao.LearnedWordsDao
 
 class LearnedWordStorageRoomImpl(private val learnedWordsDao: LearnedWordsDao) : LearnedWordsStorage {
     override fun getAll(): List<LearnedWordEntity> {

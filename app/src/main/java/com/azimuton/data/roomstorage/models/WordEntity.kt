@@ -1,4 +1,4 @@
-package com.azimuton.data.storage.models
+package com.azimuton.data.roomstorage.models
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

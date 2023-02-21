@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
 import androidx.core.content.ContextCompat
 import com.azimuton.englishiseasy.R
 import com.azimuton.englishiseasy.adapters.FrasalAdapter
@@ -26,6 +27,10 @@ class FrasalsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         initial()
+
+        val  w : Window? = activity?.window
+        w?.decorView?.systemUiVisibility = (View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // скрываем нижнюю панель навигации
+                or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY) //появляется поверх активити и исчезает
     }
     private fun initial() {
         binding.vpPager2.adapter = FrasalAdapter(requireActivity())

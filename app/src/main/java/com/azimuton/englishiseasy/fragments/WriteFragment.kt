@@ -9,15 +9,10 @@ import android.view.ViewGroup
 import android.view.Window
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.activityViewModels
-import com.azimuton.data.storage.models.LearnedWordEntity
-import com.azimuton.data.storage.room.AppRoomDatabase
-import com.azimuton.domain.models.LearnedWord
-import com.azimuton.englishiseasy.R
+import com.azimuton.data.roomstorage.models.LearnedWordEntity
+import com.azimuton.data.roomstorage.room.AppRoomDatabase
 import com.azimuton.englishiseasy.databinding.FragmentWriteBinding
-import com.azimuton.englishiseasy.viewmodels.LearnedViewModel
 import com.azimuton.englishiseasy.viewmodels.WriteViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -27,6 +22,8 @@ class WriteFragment : Fragment() {
     lateinit var database : AppRoomDatabase
      lateinit var randomWord : LearnedWordEntity
     private val viewModel : WriteViewModel by activityViewModels()
+    private var countRight = 0
+    private var countFail = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -59,12 +56,16 @@ class WriteFragment : Fragment() {
                 if(binding.tvWriteWord.text != ""){
                     if(binding.etWriteWordForChecking.text.isNotEmpty()){
                         if(randomWord.learnedEnglishWord.equals(binding.etWriteWordForChecking.text.toString(), true) ){
+                            countRight++
+                            binding.tvRight.text = countRight.toString()
                             binding.ivWriteBad.visibility = View.GONE
                             binding.ivWriteOk.visibility = View.VISIBLE
                             val ims = activity?.getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
                             ims.hideSoftInputFromWindow(binding.etWriteWordForChecking.windowToken, 0)
                             Toast.makeText(requireActivity(), "Правильно!", Toast.LENGTH_SHORT).show()
                         } else{
+                            countFail++
+                            binding.tvFail.text = countFail.toString()
                             binding.ivWriteOk.visibility = View.GONE
                             binding.ivWriteBad.visibility = View.VISIBLE
                             val ims = activity?.getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
@@ -93,5 +94,8 @@ class WriteFragment : Fragment() {
             }
 
         }
+        val  w : Window? = activity?.window
+        w?.decorView?.systemUiVisibility = (View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // скрываем нижнюю панель навигации
+                or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY) //появляется поверх активити и исчезает
     }
 }

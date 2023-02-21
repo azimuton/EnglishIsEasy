@@ -1,6 +1,6 @@
 package com.azimuton.domain.repository.roomrepository
 
-import com.azimuton.data.storage.models.LearnedWordEntity
+import com.azimuton.data.roomstorage.models.LearnedWordEntity
 import com.azimuton.domain.models.LearnedWord
 
 interface LearnedWordsRepository {

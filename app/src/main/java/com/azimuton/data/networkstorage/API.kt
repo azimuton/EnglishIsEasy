@@ -1,4 +1,4 @@
-package com.azimuton.englishiseasy
+package com.azimuton.data.networkstorage
 
 
 import com.azimuton.domain.apimodels.News
@@ -9,7 +9,7 @@ import retrofit2.http.GET
 
 interface API {
 
-    @GET("news?apikey=pub_1638954bac6dfcdfc508f94376b23f3b73d69&category=sports,top&country=gb")
+    @GET("news?apikey=pub_1638954bac6dfcdfc508f94376b23f3b73d69&category=sports,top,science,technology,health&country=gb&page")
       fun getNews() : Call<News>
 
     companion object {

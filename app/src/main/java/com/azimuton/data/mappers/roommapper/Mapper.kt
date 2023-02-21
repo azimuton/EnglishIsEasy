@@ -1,4 +1,4 @@
-package com.azimuton.data.mappers
+package com.azimuton.data.mappers.roommapper
 
 interface Mapper<E, D> {
 

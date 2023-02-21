@@ -1,4 +1,4 @@
-package com.azimuton.englishiseasy
+package com.azimuton.data.networkstorage
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

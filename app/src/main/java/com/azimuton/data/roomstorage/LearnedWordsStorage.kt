@@ -1,6 +1,6 @@
-package com.azimuton.data.storage
+package com.azimuton.data.roomstorage
 
-import com.azimuton.data.storage.models.LearnedWordEntity
+import com.azimuton.data.roomstorage.models.LearnedWordEntity
 
 
 interface LearnedWordsStorage {

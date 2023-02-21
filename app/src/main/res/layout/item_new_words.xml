@@ -63,6 +63,7 @@
                 android:layout_height="35dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
+                android:tint="@color/darkgreen"
                 android:visibility="gone"
                 app:layout_constraintEnd_toStartOf="@+id/ivItemCopyWordToLearned"
                 app:layout_constraintTop_toTopOf="parent"
@@ -89,6 +90,7 @@
                 android:layout_height="35dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
+                android:tint="@color/darkgreen"
                 app:layout_constraintEnd_toStartOf="@+id/ivItemCopyWordToLearned"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/eyeopen" />

@@ -1,8 +1,8 @@
-package com.azimuton.data.storage.room
+package com.azimuton.data.roomstorage.room
 
-import com.azimuton.data.storage.WordStorage
-import com.azimuton.data.storage.models.WordEntity
-import com.azimuton.data.storage.room.dao.WordDao
+import com.azimuton.data.roomstorage.WordStorage
+import com.azimuton.data.roomstorage.models.WordEntity
+import com.azimuton.data.roomstorage.room.dao.WordDao
 
 class WordStorageRoomImpl(private  val wordDao : WordDao) : WordStorage {
     override  fun getAll(): List<WordEntity> {

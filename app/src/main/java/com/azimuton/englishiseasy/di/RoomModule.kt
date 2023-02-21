@@ -1,9 +1,9 @@
 package com.azimuton.englishiseasy.di
 
 import android.content.Context
-import com.azimuton.data.storage.room.AppRoomDatabase
-import com.azimuton.data.storage.room.dao.LearnedWordsDao
-import com.azimuton.data.storage.room.dao.WordDao
+import com.azimuton.data.roomstorage.room.AppRoomDatabase
+import com.azimuton.data.roomstorage.room.dao.LearnedWordsDao
+import com.azimuton.data.roomstorage.room.dao.WordDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

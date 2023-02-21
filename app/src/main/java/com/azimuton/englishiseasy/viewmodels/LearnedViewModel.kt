@@ -2,17 +2,14 @@ package com.azimuton.englishiseasy.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.azimuton.data.storage.models.LearnedWordEntity
 import com.azimuton.domain.models.LearnedWord
 import com.azimuton.domain.usecase.LearnedWordDeleteUseCase
 import com.azimuton.domain.usecase.LearnedWordGetAllUseCase
 import com.azimuton.domain.usecase.LearnedWordRandomUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-import kotlin.reflect.typeOf
 
 @HiltViewModel
 class LearnedViewModel@Inject constructor(

@@ -1,5 +1,6 @@
 package com.azimuton.englishiseasy.di
 
+import com.azimuton.domain.repository.networkrepository.NetworkRepository
 import com.azimuton.domain.repository.roomrepository.LearnedWordsRepository
 import com.azimuton.domain.repository.roomrepository.WordRepository
 import com.azimuton.domain.usecase.*
@@ -11,6 +12,11 @@ import dagger.hilt.components.SingletonComponent
 @Module
 @InstallIn(SingletonComponent::class)
 object DomainModule {
+
+    @Provides
+    fun provideGetNewsUseCase(networkRepository: NetworkRepository) : GetNewsUseCase{
+        return GetNewsUseCase(networkRepository = networkRepository)
+    }
 
     @Provides
     fun provideWordDeleteUseCase(wordRepository: WordRepository): WordDeleteUseCase {

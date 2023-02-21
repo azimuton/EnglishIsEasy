@@ -1,21 +1,19 @@
 package com.azimuton.englishiseasy.fragments
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.azimuton.data.storage.room.AppRoomDatabase
+import com.azimuton.data.roomstorage.room.AppRoomDatabase
 import com.azimuton.domain.models.LearnedWord
 import com.azimuton.domain.usecase.LearnedWordGetAllUseCase
-import com.azimuton.englishiseasy.MainActivity
-import com.azimuton.englishiseasy.R
 import com.azimuton.englishiseasy.adapters.LearnedWordsAdapter
 import com.azimuton.englishiseasy.databinding.FragmentLearnedBinding
 import com.azimuton.englishiseasy.viewmodels.LearnedViewModel
@@ -71,6 +69,9 @@ class LearnedFragment : Fragment(), LearnedWordsAdapter.ViewHolder.ItemCallback 
             binding.ivEyeClosed.visibility = View.GONE
             binding.ivEyeOpen.visibility = View.VISIBLE
         }
+        val  w : Window? = activity?.window
+        w?.decorView?.systemUiVisibility = (View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // скрываем нижнюю панель навигации
+                or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY) //появляется поверх активити и исчезает
     }
     private fun getData() {
         val wordFromDb: List<LearnedWord> = getAll.execute()

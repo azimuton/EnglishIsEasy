@@ -1,11 +1,10 @@
-package com.azimuton.data.storage.room.dao
+package com.azimuton.data.roomstorage.room.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import com.azimuton.data.storage.models.LearnedWordEntity
-import com.azimuton.domain.models.LearnedWord
+import com.azimuton.data.roomstorage.models.LearnedWordEntity
 
 @Dao
 interface LearnedWordsDao {

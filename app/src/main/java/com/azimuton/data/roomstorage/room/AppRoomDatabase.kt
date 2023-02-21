@@ -1,13 +1,13 @@
-package com.azimuton.data.storage.room
+package com.azimuton.data.roomstorage.room
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.azimuton.data.storage.models.LearnedWordEntity
-import com.azimuton.data.storage.models.WordEntity
-import com.azimuton.data.storage.room.dao.LearnedWordsDao
-import com.azimuton.data.storage.room.dao.WordDao
+import com.azimuton.data.roomstorage.models.LearnedWordEntity
+import com.azimuton.data.roomstorage.models.WordEntity
+import com.azimuton.data.roomstorage.room.dao.LearnedWordsDao
+import com.azimuton.data.roomstorage.room.dao.WordDao
 
 @Database(entities = [WordEntity::class, LearnedWordEntity::class], version = 1)
 abstract class AppRoomDatabase: RoomDatabase() {

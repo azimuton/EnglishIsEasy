@@ -1,8 +1,8 @@
 package com.azimuton.data.repository.roomrepository
 
-import com.azimuton.data.mappers.WordListMapper
-import com.azimuton.data.mappers.WordMapper
-import com.azimuton.data.storage.WordStorage
+import com.azimuton.data.mappers.roommapper.WordListMapper
+import com.azimuton.data.mappers.roommapper.WordMapper
+import com.azimuton.data.roomstorage.WordStorage
 import com.azimuton.domain.models.Word
 import com.azimuton.domain.repository.roomrepository.WordRepository
 

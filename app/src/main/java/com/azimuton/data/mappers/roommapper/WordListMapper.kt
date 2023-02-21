@@ -1,6 +1,6 @@
-package com.azimuton.data.mappers
+package com.azimuton.data.mappers.roommapper
 
-import com.azimuton.data.storage.models.WordEntity
+import com.azimuton.data.roomstorage.models.WordEntity
 import com.azimuton.domain.models.Word
 
 class WordListMapper : Mapper<List<WordEntity>, List<Word>> {

@@ -1,8 +1,8 @@
-package com.azimuton.data.storage.room.dao
+package com.azimuton.data.roomstorage.room.dao
 
 
 import androidx.room.*
-import com.azimuton.data.storage.models.WordEntity
+import com.azimuton.data.roomstorage.models.WordEntity
 
 @Dao
 interface WordDao {

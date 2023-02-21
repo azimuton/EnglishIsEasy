@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
@@ -184,10 +185,9 @@ class NewWordsFragment : Fragment() {
                 }
             }
         }
-
-        //activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner, callback)
-
-
+        val  w : Window? = activity?.window
+        w?.decorView?.systemUiVisibility = (View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // скрываем нижнюю панель навигации
+                or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY) //появляется поверх активити и исчезает
     }
     fun animate(){
         activity?.overridePendingTransition(0, R.anim.open_activity)
